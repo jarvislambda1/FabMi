@@ -1,0 +1,252 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge-ring defect pattern observed on Lot W2024-8821. Yield map shows severe loss (22%) restricted to the outer 15mm of the wafer. Metrology confirms edge etch rate is 14% higher than center.\n\nProcess Context: Processed on ETCH-LAM-04 using recipe POLY_GATE_Main. Tool history shows current RF hours at 2,850. Last PM was performed 4 weeks ago. No recent alarms recorded.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aged O-ring seal in etch chamber\n- **Mechanism**: The tool ETCH-LAM-04 is at 2,850 RF-hours, which exceeds the critical O-ring lifetime limit of 2,500 RF-hours. Degradation of the seal is likely causing a minor plasma leak at the chamber edge, locally increasing plasma density and etch rate.\n- **Data Evidence**: Edge etch rate +14% (Spec: <5% uniformity). This edge-fast profile is characteristic of seal failure.\n\n## Corrective Actions\n\n1. **Tool Down**: Immediately down ETCH-LAM-04.\n2. **Replace Components**: Replace chamber O-ring (P/N: 839-0127).\n3. **Leak Check**: Perform chamber leak check. Target: <1 mTorr/min rise.\n4. **Seasoning**: Run 5 dummy wafers to condition the new seal.\n5. **Validation**: Run qual wafer and verify edge-to-center uniformity is <5%.\n\n## Prevention Measures\n- **FDC**: Configure alarm for RF-hours > 2,400 to trigger warning.\n- **PM Protocol**: Enforce mandatory O-ring replacement at 2,500 RF-hour PM cycle.\n\n**Severity**: Critical\n**Yield Impact**: 22%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Faint ring pattern detected on edge of wafers in Lot W2024-9003. Defect density is low but consistent across all 25 wafers. Visual inspection shows discoloration on the wafer bevel.\n\nProcess Context: Lithography cell LITH-TEL-12. Recipe: VIA_LAYER_03. EBR (Edge Bead Removal) module was recently adjusted. Standard nozzle alignment check was passed 2 days ago.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Edge Bead Removal (EBR) Nozzle Misalignment\n- **Mechanism**: The consistent ring pattern and bevel discoloration suggest the solvent nozzle is misaligned, failing to cleanly remove photoresist from the wafer edge (or removing too much). \n- **Correlation**: Occurrence after recent EBR adjustment points to calibration error.\n\n## Corrective Actions\n\n1. **Inspect**: Check EBR nozzle position on LITH-TEL-12.\n2. **Calibrate**: Re-align nozzle to recipe spec (Target: 1.5mm from edge ±0.2mm).\n3. **Verify Flow**: Check solvent flow rate (Spec: 15-20 cc/min).\n4. **Validation**: Process 2 send-ahead wafers and inspect bevel under microscope.\n\n## Prevention Measures\n- **Maintenance**: Add micrometer verification step to EBR adjustment procedure.\n- **SPC**: Track bevel width metrics in SPC chart.\n\n**Severity**: Major\n**Yield Impact**: <2% (Potential risk for subsequent etch)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Distinct 'donut' shaped high-defect region at wafer edge. Center is clean. Lot W2024-4451 shows 15% yield loss.\n\nProcess Context: Etch Chamber ETCH-AMAT-09. Process: Oxide Etch. The Focus Ring was replaced yesterday during a quick-fix maintenance, but the O-rings were not changed.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Plasma Confinement Ring (Focus Ring) Installation Issue\n- **Mechanism**: The recent replacement of the focus ring on ETCH-AMAT-09 is the likely culprit. If the ring is not seated perfectly flat, or if an incompatible part number was used (e.g., Quartz vs. SiC mismatch), it alters the plasma sheath at the wafer edge.\n- **Correlation**: Timeline matches perfectly with yesterday's maintenance event.\n\n## Corrective Actions\n\n1. **Inspect Hardware**: Open chamber ETCH-AMAT-09 and inspect focus ring seating.\n2. **Verify Part**: Confirm P/N matches BOM (Should be 715-3301 for this recipe).\n3. **Re-install**: Re-seat the ring and torque to spec.\n4. **Qualify**: Run etch rate uniformity monitor.\n\n## Prevention Measures\n- **Training**: Review focus ring installation procedure with technicians.\n- **Parts**: Implement barcode scanning for critical chamber parts to prevent mismatch.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge yield drop-off observed on multiple lots (W2024-1120, W2024-1121, W2024-1122) processed sequentially. Defect maps show a solid ring of unetched residues at the very edge (148-150mm radius).\n\nProcess Context: Tool: ETCH-LAM-02. RF Hours: 1,200 (Healthy). Clamp ring typically replaced at 2,000 hours. Helium backside cooling flow is stable.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Mechanical Clamp Ring Wear/Contamination\n- **Mechanism**: The physical clamp ring holding the wafer has likely accumulated polymer buildup or is worn, shadowing the very edge of the wafer and preventing the plasma from etching that region.\n- **Evidence**: 'Unetched residues' at the clamp interface radius (148mm+) is the signature of clamp shadowing.\n\n## Corrective Actions\n\n1. **Visual Check**: Inspect clamp ring fingers for buildup.\n2. **Clean/Replace**: Wet clean the clamp ring or replace if worn (P/N: 221-5509).\n3. **Validation**: Run a particle monitor wafer and checking clamping marks.\n\n## Prevention Measures\n- **Clean Frequency**: Decrease wet clean interval for clamp rings from 2,000 to 1,500 RF-hours.\n- **WBC**: Monitor Wafer Backside Cooling (WBC) leak rate trends as a proxy for clamp seal integrity.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Severe arcing marks detected at the edge of wafers from Lot W2024-5505. Visual inspection shows burn marks on the bevel.\n\nProcess Context: PVD Chamber PVD-AMAT-01 (TiN Deposition). The chamber was seasoned yesterday. DC Bias trends show instability during the last 3 runs.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Edge Ring Arcing / Poor Grounding\n- **Mechanism**: Poor electrical contact between the wafer edge and the ground ring/edge ring in the PVD chamber. This causes charge buildup and subsequent arcing (micro-lightning) at the wafer edge.\n- **Data Evidence**: DC Bias instability is a key indicator of arcing events.\n\n## Corrective Actions\n\n1. **Tool Down**: Stop PVD-AMAT-01 immediately.\n2. **Hardware Swap**: Replace the Edge Ring (P/N: 0040-9921) and clean the grounding strap.\n3. **Inspect**: Check for pitting on the electrostatic chuck surface.\n4. **Validation**: Run dummy wafers and monitor DC Bias trace for stability.\n\n## Prevention Measures\n- **FDC**: Set tight limits on DC Bias spikes.\n- **Life Cycle**: Reduce edge ring life counter limit based on historical failure data.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Scrap)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Intermittent edge-ring peeling observed on Lot W2024-6612. Peeling is concentrated at the notch and 5mm inward.\n\nProcess Context: Processed on CVD-TEL-05. Deposition temp 400C. The robot blade alignment was recently adjusted.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Robot Blade Hitting Wafer Edge\n- **Mechanism**: The recent robot blade adjustment likely left the placement slightly off-center. During transfer into the hot chamber, the blade scrapes the wafer edge, creating particles or micro-fractures that lead to film peeling under thermal stress.\n- **Correlation**: Correlates with recent maintenance.\n\n## Corrective Actions\n\n1. **Teach**: Re-teach robot transfer coordinates for CVD-TEL-05.\n2. **Inspect**: Check robot blade for burn marks or particles.\n3. **Validation**: Wafer placement accuracy test.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge exclusion violation. Photoresist extends to 0.5mm from edge (Spec: 1.5mm). Lot W2024-7701.\n\nProcess Context: Track TRK-TEL-02. Coater Cup 3. Solvent supply pressure is normal.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: EBR Nozzle Clog\n- **Mechanism**: The Backside/Edge Bead Removal nozzle is partially clogged, reducing the solvent flow rate despite normal supply pressure. This results in insufficient removal of the edge bead.\n\n## Corrective Actions\n\n1. **Clean**: Remove and soak EBR nozzle tip.\n2. **Replace**: If cleaning fails, replace nozzle (P/N: 112-4401).\n3. **Validation**: Measure bevel width on test wafer.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: High particle count at wafer edge (ring pattern) on Lot W2024-3399.\n\nProcess Context: Etch-LAM-08. Viewport window was cleaned 50 RF-hours ago.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Polymer Flaking from Shadow Ring\n- **Mechanism**: The shadow ring (protecting the ESC) has accumulated excessive polymer. Thermal cycling is causing this polymer to flake off directly onto the wafer edge.\n\n## Corrective Actions\n\n1. **Clean**: Wet clean shadow ring.\n2. **PM**: Check chamber cleanliness.\n3. **Validation**: Particle monitor.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Wafer edge chipping detected at 3 o'clock position on 12 wafers in Lot W2024-2211.\n\nProcess Context: CMP-AMAT-01. Head 2. Retaining ring wear index is at 95%.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Worn Retaining Ring\n- **Mechanism**: The retaining ring on CMP Head 2 is worn out (95% life). The wafer is likely slipping or vibrating against the sharp edge of the worn ring, causing chipping.\n\n## Corrective Actions\n\n1. **Replace**: Change Retaining Ring (P/N: 550-2219).\n2. **Break-in**: Run break-in disk recipe.\n3. **Validation**: Monitor torque and vibration.\n\n**Severity**: Major\n**Yield Impact**: 12%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Incomplete etch at wafer edge (Outer 3mm). Lot W2024-1102.\n\nProcess Context: Etch-TEL-03. ESC leakage current is slightly elevated.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wafer Cooling / Helium Leak at Edge\n- **Mechanism**: A micro-leak in the backside Helium cooling circuit at the wafer edge is cooling the edge excessively (or diluting plasma chemistry), slowing the etch rate locally.\n\n## Corrective Actions\n\n1. **Leak Check**: Run extensive ESC leak check.\n2. **Inspect**: Check O-ring seal on the ESC surface.\n3. **Validation**: Etch rate uniformity wafer.\n\n**Severity**: Major\n**Yield Impact**: 3%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge-ring yield loss (18%) on Lot W2024-8844. Etch rate high at edge.\n\nProcess Context: Tool: ETCH-LAM-01. RF Hours: 2,700. O-ring spec is 2,500 hours.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aged O-ring Seal (Overdue)\n- **Mechanism**: Tool is 200 hours past O-ring life spec. Seal failure is altering plasma density at edge.\n\n## Corrective Actions\n\n1. **Replace**: Change O-ring.\n2. **Validation**: Leak check and uniformity monitor.\n\n**Severity**: Critical\n**Yield Impact**: 18%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Uniform ring of defects 10mm from edge. Lot W2024-5512.\n\nProcess Context: CVD-AMAT-04. Showerhead-to-susceptor gap calibration performed yesterday.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Incorrect Showerhead Gap Parallelism\n- **Mechanism**: The gap between showerhead and wafer is not perfectly parallel (tilted). This creates a specific zone (ring) of non-uniform gas velocity/deposition.\n- **Correlation**: Linked to recent gap calibration.\n\n## Corrective Actions\n\n1. **Level**: Perform leveling calibration of susceptor.\n2. **Validation**: Deposition uniformity map.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scalloped edge pattern on wafer bevel. Lot W2024-9922.\n\nProcess Context: Wet-Clean-DNS-05. Spin speed profile modified recently.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Unstable Spin Speed / Splash-back\n- **Mechanism**: The modified spin profile causes turbulence or splashing of the chemical back onto the wafer edge/bevel, creating a scalloped etch pattern.\n\n## Corrective Actions\n\n1. **Revert**: Restore previous qualified spin recipe.\n2. **Validation**: Process visual inspection wafer.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge defocus. Patterns at edge are blurred. Lot W2024-4401.\n\nProcess Context: LITH-ASML-07. Edge shot leveling sensor dirty.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Leveling Sensor Contamination\n- **Mechanism**: The optical sensor used to map wafer height at the edge is dirty, leading to incorrect focus height adjustments during edge field exposure.\n\n## Corrective Actions\n\n1. **Clean**: Clean leveling sensor optics.\n2. **Validation**: Focus-Exposure Matrix (FEM) at edge fields.\n\n**Severity**: Critical\n**Yield Impact**: 15% (Edge chips)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge discoloration (Blue ring). Lot W2024-2299.\n\nProcess Context: Furnace-TEL-02. Oxidation. Boat slot 1-5 (top) affected most.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Injection/Exhaust Non-uniformity (Top Zone)\n- **Mechanism**: The gas injector nozzle for the top zone may be partially blocked, or exhaust flow is unbalanced, changing the oxide thickness (color) at the wafer edge in the top of the boat.\n\n## Corrective Actions\n\n1. **Inspect**: Check injector nozzles.\n2. **Profile**: Run temperature/gas profile tuning.\n3. **Validation**: Oxide thickness map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Heavy polymer deposition on wafer bevel. Lot W2024-1188.\n\nProcess Context: Etch-LAM-05. Bevel Clean module disabled.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Disabled Bevel Clean\n- **Mechanism**: The bevel clean step (WBC) was disabled or failed to fire. Polymer from the main etch step accumulated on the bevel.\n\n## Corrective Actions\n\n1. **Enable**: Re-enable Bevel Clean step.\n2. **Check**: Verify bevel clean plasma strikes.\n3. **Validation**: Microscope inspection of bevel.\n\n**Severity**: Major\n**Yield Impact**: Risk of particle flaking later."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge peeling of Tungsten film. Lot W2024-3344.\n\nProcess Context: CVD-AMAT-06. Edge purge flow rate low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Insufficient Edge Purge\n- **Mechanism**: The edge purge gas (Argon) prevents deposition on the very edge/bevel. Low flow allowed film to wrap around the edge, where it adheres poorly and peels.\n\n## Corrective Actions\n\n1. **Adjust**: Set edge purge MFC to correct flow (e.g., 500 sccm).\n2. **Validation**: Edge exclusion measurement.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Ring of void defects in copper plating at edge. Lot W2024-5566.\n\nProcess Context: ECP-LAM-01 (Electroplating). Contact ring contacts look corroded.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Poor Electrical Contact (Edge)\n- **Mechanism**: Corroded contacts on the clam-shell holder increase resistance at the wafer edge, reducing local current density and causing plating voids.\n\n## Corrective Actions\n\n1. **Clean/Replace**: Replace contact ring.\n2. **Validation**: Plating uniformity test.\n\n**Severity**: Critical\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Double ring pattern. Lot W2024-7777.\n\nProcess Context: LITH-NIKON-02. Spin coater exhaust alarm (ignored).",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Solvent Evaporation/Exhaust Issue\n- **Mechanism**: Unstable exhaust causes solvent vapor reflux, creating interference patterns (drying rings) in the photoresist thickness.\n\n## Corrective Actions\n\n1. **Fix**: Repair exhaust damper.\n2. **Validation**: Thickness map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge die gain is low. Electrical open circuits at edge. Lot W2024-6655.\n\nProcess Context: CMP-AMAT-03. Profile control set to 'Edge Fast'.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Over-polishing at Edge\n- **Mechanism**: The 'Edge Fast' profile setting was too aggressive, causing dishing or erosion of copper lines at the wafer edge, leading to open circuits.\n\n## Corrective Actions\n\n1. **Tune**: Adjust zone pressures (reduce Edge zone pressure).\n2. **Validation**: Electrical test (ET) wafer.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: jagged pattern at wafer edge. Lot W2024-0011.\n\nProcess Context: LITH-ASML-01. Wafer stage vibration detected.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Stage Synchronization Error\n- **Mechanism**: Vibration in the wafer stage during edge die scanning causes overlay/focus errors that manifest as a jagged pattern.\n\n## Corrective Actions\n\n1. **Service**: Check stage air bearings and interferometers.\n2. **Validation**: Overlay test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Burn mark at flat. Lot W2024-1122.\n\nProcess Context: IMP-VARIAN-01 (Implanter). Disk clamp arcing.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Disk Clamp Arcing\n- **Mechanism**: Poor contact between the implanter disk clamp and the wafer caused arcing during high-current implant.\n\n## Corrective Actions\n\n1. **Clean**: Clean clamp pads.\n2. **Validation**: Monitor beam current stability.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge ring yield loss 25%. Lot W2024-9988.\n\nProcess Context: ETCH-LAM-09. RF Hours 2900.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Consumables End-of-Life (O-ring)\n- **Mechanism**: 2900 RF hours is well beyond the 2500 hr limit. Vacuum integrity at the edge is compromised.\n\n## Corrective Actions\n\n1. **PM**: Full PM with O-ring replacement.\n2. **Validation**: Leak check.\n\n**Severity**: Critical\n**Yield Impact**: 25%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Milky haze ring at edge. Lot W2024-2233.\n\nProcess Context: Wet-Bench-02. Rinse tank resistivity low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Insufficient Rinse / Water Quality\n- **Mechanism**: Low resistivity indicates dirty water. Chemical residues were not fully rinsed from the wafer edge (where surface tension is highest).\n\n## Corrective Actions\n\n1. **Flush**: Dump and refill rinse tank.\n2. **Validation**: Resistivity check > 18 MOhm.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge-ring defect, high contact resistance. Lot W2024-4455.\n\nProcess Context: PVD-AMAT-02. Target life at 98%.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Target Erosion (End of Life)\n- **Mechanism**: As the PVD target erodes (98% life), the deposition profile becomes non-uniform, typically thinner at the edge, leading to high resistance.\n\n## Corrective Actions\n\n1. **Change**: Replace Target.\n2. **Validation**: Sheet resistance map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Residue ring 3mm from edge. Lot W2024-6677.\n\nProcess Context: CMP-AMAT-05. Cleaning module brush gap wide.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Post-CMP Clean Brush Setup\n- **Mechanism**: The PVA brush gap is too wide, failing to make mechanical contact with the wafer edge to remove slurry residue.\n\n## Corrective Actions\n\n1. **Calibrate**: Zero the brush gap.\n2. **Validation**: Defect scan.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge chipping on 50% of wafers. Lot W2024-8899.\n\nProcess Context: Sorter-02. Aligner speed fast.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aligner Impact\n- **Mechanism**: High speed alignment is impacting the wafer edge against the pins too hard.\n\n## Corrective Actions\n\n1. **Slow**: Reduce aligner speed.\n2. **Validation**: Visual check.\n\n**Severity**: Minor\n**Yield Impact**: Edge exclusion."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Dark ring at edge. Lot W2024-1100.\n\nProcess Context: RTP-MATTSON-01. Edge guard ring broken.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Broken Guard Ring (Thermal)\n- **Mechanism**: The broken guard ring allows excessive heat loss at the wafer edge during Rapid Thermal Processing, causing a temperature deviation (cool edge).\n\n## Corrective Actions\n\n1. **Replace**: Install new guard ring.\n2. **Validation**: Pyrometer check.\n\n**Severity**: Critical\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge bridging of metal lines. Lot W2024-3322.\n\nProcess Context: LITH-TEL-05. Edge exposure dosage low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Underexposure at Edge\n- **Mechanism**: Low exposure dose at the edge fields failed to fully clear the photoresist, leading to metal bridging after etch.\n\n## Corrective Actions\n\n1. **Adjust**: Increase edge shot exposure dose.\n2. **Validation**: CD SEM at edge.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge peel. Lot W2024-5544.\n\nProcess Context: CVD-AMAT-08. Heater lift pin stuck.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wafer Tilt / Lift Pin Issue\n- **Mechanism**: A stuck lift pin caused the wafer to sit tilted on the heater, causing a severe temperature gradient at one edge and poor adhesion.\n\n## Corrective Actions\n\n1. **Fix**: Repair/Clean lift pin assembly.\n2. **Validation**: Cycling test.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Single wafer)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Particle ring. Lot W2024-7766.\n\nProcess Context: ETCH-LAM-03. Gas distribution plate dirty.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Plate Contamination\n- **Mechanism**: Particles falling from a dirty gas distribution plate, pushed to the edge by gas flow dynamics.\n\n## Corrective Actions\n\n1. **Clean**: Clean gas plate.\n2. **Validation**: Particle wafer.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge thickness high. Lot W2024-9900.\n\nProcess Context: CMP-AMAT-04. Carrier film worn.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Carrier Film Wear\n- **Mechanism**: Worn carrier film loses its ability to apply uniform pressure at the edge, leading to under-polishing (thick edge).\n\n## Corrective Actions\n\n1. **Replace**: Carrier film.\n2. **Validation**: Uniformity check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Corrosion ring at edge. Lot W2024-2212.\n\nProcess Context: Wet-Bench-03. Marangoni dryer surface tension IPA flow low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dryer Failure\n- **Mechanism**: Low IPA flow caused water spots to remain on the edge, leading to corrosion.\n\n## Corrective Actions\n\n1. **Refill/Fix**: Check IPA supply.\n2. **Validation**: Drying test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge pattern collapse. Lot W2024-4433.\n\nProcess Context: Wet-Clean-TEL-01. Rinse speed too high.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: High Rinse Speed / Mechanical Force\n- **Mechanism**: Excessive centrifugal force or water impact at high speed caused high-aspect ratio features at the edge to collapse.\n\n## Corrective Actions\n\n1. **Optimize**: Reduce rinse speed.\n2. **Validation**: SEM inspection.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge roughness. Lot W2024-6688.\n\nProcess Context: LITH-ASML-05. BARC thickness variation.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: BARC Uniformity\n- **Mechanism**: Variation in Bottom Anti-Reflective Coating (BARC) at the edge changed the reflectivity, causing standing waves and line roughness.\n\n## Corrective Actions\n\n1. **Track**: Check coater uniformity for BARC.\n2. **Validation**: CD uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge ring shorting. Lot W2024-8877.\n\nProcess Context: CMP-EBRA-01. Slurry residue.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Post-CMP Cleaning\n- **Mechanism**: Slurry residue left at the edge caused electrical shorts.\n\n## Corrective Actions\n\n1. **Clean**: Optimize Megasonic clean.\n2. **Validation**: Defect map.\n\n**Severity**: Critical\n**Yield Impact**: 12%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Wafer breakage at edge. Lot W2024-0099.\n\nProcess Context: Anneal-Furnace-01. Quartz boat stress.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Thermal Stress / Boat Contact\n- **Mechanism**: Thermal expansion mismatch or sticking between wafer and quartz boat slot caused edge stress and fracture.\n\n## Corrective Actions\n\n1. **Clean**: Etch quartz boat to remove buildup.\n2. **Validation**: Thermal cycle.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge bead too wide. Lot W2024-1144.\n\nProcess Context: Coater-TEL-09. EBR cut width setting wrong.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Recipe Parameter Error\n- **Mechanism**: The EBR cut width parameter was set incorrectly in the recipe.\n\n## Corrective Actions\n\n1. **Edit**: Correct recipe.\n2. **Validation**: Bevel check.\n\n**Severity**: Minor\n**Yield Impact**: 0% (if caught)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge pitting. Lot W2024-3366.\n\nProcess Context: Etch-LAM-02. Bias power spike.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Micro-arcing\n- **Mechanism**: Power spikes caused breakdown of the sheath at the edge, leading to pitting.\n\n## Corrective Actions\n\n1. **Check**: RF generator stability.\n2. **Validation**: Bias log monitor.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge uniformity drift 6%. Lot W2024-5588.\n\nProcess Context: ETCH-TEL-04. Chamber wall temperature sensor faulty.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chamber Wall Temp Drift\n- **Mechanism**: Faulty sensor caused wall temp to drift, altering polymerization rate at the edge.\n\n## Corrective Actions\n\n1. **Replace**: Wall temp sensor.\n2. **Validation**: Uniformity wafer.\n\n**Severity**: Major\n**Yield Impact**: 6%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge ring loss. Lot W2024-7722.\n\nProcess Context: PVD-AMAT-03. Collimator life exceeded.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Collimator Clogging\n- **Mechanism**: End-of-life collimator restricts deposition flux at high angles (edge), reducing thickness.\n\n## Corrective Actions\n\n1. **Replace**: Collimator.\n2. **Validation**: Thickness map.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge particles. Lot W2024-9944.\n\nProcess Context: Loadlock-01. Venting turbulence.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Fast Venting\n- **Mechanism**: Loadlock vented too fast, stirring up particles that settled on wafer edges.\n\n## Corrective Actions\n\n1. **Adjust**: Slow down soft-vent recipe.\n2. **Validation**: Particle check.\n\n**Severity**: Minor\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge notches. Lot W2024-2255.\n\nProcess Context: Wet-Clean-04. Cassette guide wear.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cassette/Carrier Wear\n- **Mechanism**: Worn guides in the wet cleaning cassette allowed wafers to rattle, notching the edges.\n\n## Corrective Actions\n\n1. **Replace**: Cassettes.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge focus spot. Lot W2024-4477.\n\nProcess Context: LITH-NIKON-05. Backside particle.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Backside Particle\n- **Mechanism**: A particle on the wafer backside at the edge deformed the wafer locally, causing a focus hotspot.\n\n## Corrective Actions\n\n1. **Clean**: Chuck and wafer backside clean.\n2. **Validation**: Flatness check.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge ring yield drop. Lot W2024-6699.\n\nProcess Context: Etch-LAM-06. Endpoint trace noise.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Endpoint Failure\n- **Mechanism**: Noisy endpoint caused over-etch at the edge.\n\n## Corrective Actions\n\n1. **Fix**: Check optical window/fiber.\n2. **Validation**: Run monitor.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge lifting. Lot W2024-8811.\n\nProcess Context: CMP-AMAT-02. Downforce high.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Excessive Downforce\n- **Mechanism**: High edge downforce caused metal lifting/delamination.\n\n## Corrective Actions\n\n1. **Reduce**: Adjust edge zone pressure.\n2. **Validation**: Inspect.\n\n**Severity**: Critical\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge shading. Lot W2024-0022.\n\nProcess Context: IMP-VARIAN-02. Shadow clamp misalignment.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Shadowing\n- **Mechanism**: Misaligned clamp shadowed the implant at the edge.\n\n## Corrective Actions\n\n1. **Align**: Re-align clamp.\n2. **Validation**: TW map.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge veil. Lot W2024-1155.\n\nProcess Context: Etch-TEL-01. Deposition-to-etch ratio drift.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Polymer Excess\n- **Mechanism**: Process drifted to polymer-rich regime, leaving veils at the edge.\n\n## Corrective Actions\n\n1. **Clean**: Dry clean chamber.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge color fringe. Lot W2024-3388.\n\nProcess Context: CVD-LAM-04. Edge heater element failure.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Heater Failure (Edge Zone)\n- **Mechanism**: Failed edge heater caused temperature drop and thickness change.\n\n## Corrective Actions\n\n1. **Replace**: Heater element.\n2. **Validation**: Temp map.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge blisters. Lot W2024-5500.\n\nProcess Context: Anneal-RTP-03. Ramp rate too fast.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Thermal Shock\n- **Mechanism**: Fast ramp rate caused blistering at the edge due to stress.\n\n## Corrective Actions\n\n1. **Slow**: Reduce ramp rate.\n2. **Validation**: Microscope.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  }
+]

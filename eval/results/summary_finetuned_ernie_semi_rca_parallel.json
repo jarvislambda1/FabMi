@@ -1,0 +1,80 @@
+{
+  "total": 155,
+  "valid": 155,
+  "errors": 0,
+  "rouge1": 0.506,
+  "rouge2": 0.2388,
+  "rougeL": 0.4041,
+  "severity_accuracy": 0.5032,
+  "structure_score": 0.8968,
+  "avg_latency_ms": 31731.2,
+  "yield_accuracy": 0.7615,
+  "by_defect_type": {
+    "center": {
+      "count": 18,
+      "rouge1": 0.5238,
+      "rougeL": 0.406,
+      "severity_acc": 0.6667,
+      "structure": 0.8968
+    },
+    "donut": {
+      "count": 19,
+      "rouge1": 0.5174,
+      "rougeL": 0.4045,
+      "severity_acc": 0.4737,
+      "structure": 0.9398
+    },
+    "edge_loc": {
+      "count": 17,
+      "rouge1": 0.5292,
+      "rougeL": 0.4259,
+      "severity_acc": 0.5882,
+      "structure": 0.8571
+    },
+    "edge_ring": {
+      "count": 25,
+      "rouge1": 0.5024,
+      "rougeL": 0.3856,
+      "severity_acc": 0.56,
+      "structure": 0.96
+    },
+    "loc": {
+      "count": 16,
+      "rouge1": 0.5134,
+      "rougeL": 0.3951,
+      "severity_acc": 0.6875,
+      "structure": 0.8929
+    },
+    "near_full": {
+      "count": 15,
+      "rouge1": 0.4572,
+      "rougeL": 0.3823,
+      "severity_acc": 0.2,
+      "structure": 0.9048
+    },
+    "none": {
+      "count": 11,
+      "rouge1": 0.4769,
+      "rougeL": 0.4234,
+      "severity_acc": 0.2727,
+      "structure": 0.8312
+    },
+    "random": {
+      "count": 16,
+      "rouge1": 0.528,
+      "rougeL": 0.4382,
+      "severity_acc": 0.5,
+      "structure": 0.8393
+    },
+    "scratch": {
+      "count": 18,
+      "rouge1": 0.4914,
+      "rougeL": 0.3908,
+      "severity_acc": 0.4444,
+      "structure": 0.8889
+    }
+  },
+  "model": "ernie_semi_rca",
+  "workers": 8,
+  "total_time_seconds": 632.2
+}

@@ -1,0 +1,80 @@
+{
+  "total": 155,
+  "valid": 155,
+  "errors": 0,
+  "rouge1": 0.1014,
+  "rouge2": 0.0282,
+  "rougeL": 0.0631,
+  "severity_accuracy": 0.2,
+  "yield_accuracy": 0.9815,
+  "structure_score": 0.3548,
+  "avg_latency_ms": 28852.6,
+  "by_defect_type": {
+    "center": {
+      "count": 18,
+      "rouge1": 0.0824,
+      "rougeL": 0.0539,
+      "severity_acc": 0.2222,
+      "structure": 0.4048
+    },
+    "donut": {
+      "count": 19,
+      "rouge1": 0.0921,
+      "rougeL": 0.0581,
+      "severity_acc": 0.1579,
+      "structure": 0.4135
+    },
+    "edge_loc": {
+      "count": 17,
+      "rouge1": 0.1119,
+      "rougeL": 0.0717,
+      "severity_acc": 0.2353,
+      "structure": 0.3193
+    },
+    "edge_ring": {
+      "count": 25,
+      "rouge1": 0.0949,
+      "rougeL": 0.0579,
+      "severity_acc": 0.24,
+      "structure": 0.4114
+    },
+    "loc": {
+      "count": 16,
+      "rouge1": 0.0878,
+      "rougeL": 0.0582,
+      "severity_acc": 0.0625,
+      "structure": 0.3214
+    },
+    "near_full": {
+      "count": 15,
+      "rouge1": 0.1274,
+      "rougeL": 0.0736,
+      "severity_acc": 0.5333,
+      "structure": 0.3429
+    },
+    "none": {
+      "count": 11,
+      "rouge1": 0.0634,
+      "rougeL": 0.0429,
+      "severity_acc": 0.0,
+      "structure": 0.3766
+    },
+    "random": {
+      "count": 16,
+      "rouge1": 0.1151,
+      "rougeL": 0.0679,
+      "severity_acc": 0.25,
+      "structure": 0.3125
+    },
+    "scratch": {
+      "count": 18,
+      "rouge1": 0.1306,
+      "rougeL": 0.0801,
+      "severity_acc": 0.0556,
+      "structure": 0.2619
+    }
+  },
+  "model": "baidu/ernie-4.5-21B-a3b-thinking",
+  "elapsed_seconds": 1166.7,
+  "workers": 4
+}

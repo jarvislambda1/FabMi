@@ -1,0 +1,152 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Cluster of scratches/chips at wafer flat/notch area (Edge). Lot W2024-4411.\n\nProcess Context: Tool: LITH-NIKON-08. Pre-aligner speed set to 'Fast'.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pre-aligner Handling Impact\n- **Mechanism**: High speed alignment causes the wafer to hit the alignment pins with excessive force, chipping the edge at the notch.\n\n## Corrective Actions\n\n1. **Adjust**: Reduce pre-aligner speed to 'Normal' or 'Slow'.\n2. **Validation**: Inspect notch of dummy wafers.\n\n**Severity**: Minor\n**Yield Impact**: <1% (Edge exclusion zone)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Crescent-shaped unetched area at wafer edge (3 o'clock). Lot W2024-2202.\n\nProcess Context: Tool: ETCH-LAM-01. Wafer placement sensor jittery.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wafer Slide / Off-Center Placement\n- **Mechanism**: The wafer was not placed perfectly centered on the chuck. The clamp ring covered the 3 o'clock edge significantly more than intended, masking the etch.\n- **Evidence**: Sensor jitter indicates transfer instability.\n\n## Corrective Actions\n\n1. **Calibrate**: Robot hand-off position to ETCH-LAM-01.\n2. **Clean**: Clean electrostatic chuck surface (stickiness can cause sliding).\n3. **Validation**: Wafer placement repeatability test.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge notch chip. Lot W2024-5511.\n\nProcess Context: Robot. Gripper.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gripper Misalignment\n- **Mechanism**: Robot gripper closed on the notch edge, chipping it.\n\n## Corrective Actions\n\n1. **Teach**: Gripper.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge flat scratch. Lot W2024-6622.\n\nProcess Context: Aligner. Pin wear.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aligner Pin Burr\n- **Mechanism**: Burred alignment pin scratched the flat during rotation.\n\n## Corrective Actions\n\n1. **Replace**: Pins.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc peeling. Lot W2024-7733.\n\nProcess Context: CVD. Clamp.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Shadowing/Stress\n- **Mechanism**: Mechanical clamp caused local stress and peeling at contact point.\n\n## Corrective Actions\n\n1. **Adjust**: Clamp force.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc particle. Lot W2024-8844.\n\nProcess Context: Transport. SMIF pod.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pod Door Scraping\n- **Mechanism**: SMIF pod door scraped frame during open/close, dropping particles on wafer edge near door.\n\n## Corrective Actions\n\n1. **Align**: Pod opener.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc resist bead. Lot W2024-9955.\n\nProcess Context: Coater. EBR drip.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: EBR Drip\n- **Mechanism**: Solvent dripped from EBR nozzle onto one spot on the edge.\n\n## Corrective Actions\n\n1. **Fix**: Suck-back.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc burn. Lot W2024-0066.\n\nProcess Context: Etch. Ground pin.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Ground Pin Arcing\n- **Mechanism**: Poor contact on one ground pin caused arcing at that edge location.\n\n## Corrective Actions\n\n1. **Clean**: Pins.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc crack. Lot W2024-1177.\n\nProcess Context: Anneal. Boat slot.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Thermal Stress Crack\n- **Mechanism**: Chip in quartz boat slot caused stress concentration and crack initiation at wafer edge.\n\n## Corrective Actions\n\n1. **Replace**: Boat.\n2. **Validation**: Visual.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc bridging. Lot W2024-2288.\n\nProcess Context: Litho. Edge exclusion.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Edge Bead Variation\n- **Mechanism**: Local swelling of edge bead caused focus error and bridging at one edge spot.\n\n## Corrective Actions\n\n1. **Tune**: EBR.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc corrosion. Lot W2024-3399.\n\nProcess Context: Wet. Hanger.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Hanger Mark\n- **Mechanism**: Chemical trapped in carrier hanger caused corrosion at contact point.\n\n## Corrective Actions\n\n1. **Clean**: Hangers.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc pit. Lot W2024-4400.\n\nProcess Context: PVD. Clip.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clip Shadowing\n- **Mechanism**: Wafer holding clip shadowed deposition, leaving a pit/void.\n\n## Corrective Actions\n\n1. **Check**: Clip alignment.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc scratch. Lot W2024-5511.\n\nProcess Context: Inspect. Tweezer.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Tweezer Scratch\n- **Mechanism**: Manual handling scratch at wafer edge.\n\n## Corrective Actions\n\n1. **Train**: Handling.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc stain. Lot W2024-6622.\n\nProcess Context: Dry. Finger.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Glove Mark\n- **Mechanism**: Operator touched edge with glove.\n\n## Corrective Actions\n\n1. **Train**: Handling.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc hillock. Lot W2024-7733.\n\nProcess Context: Sputter. Clamp hot spot.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Heating\n- **Mechanism**: Poor thermal contact at clamp caused local overheating and hillocks.\n\n## Corrective Actions\n\n1. **Clean**: Clamp.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc divot. Lot W2024-8844.\n\nProcess Context: CMP. Carrier.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Carrier Chip\n- **Mechanism**: Chipped ceramic on carrier ring damaged wafer edge.\n\n## Corrective Actions\n\n1. **Replace**: Ring.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc residue. Lot W2024-9955.\n\nProcess Context: Strip. Flow.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Flow Stagnation\n- **Mechanism**: Flow eddy at cassette contact point prevented stripping.\n\n## Corrective Actions\n\n1. **Agitate**: Increase.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc under-etch. Lot W2024-0066.\n\nProcess Context: Wet etch. Bubble.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Bubble Trap\n- **Mechanism**: Large bubble trapped at edge cassette guide.\n\n## Corrective Actions\n\n1. **Agitate**: Improve.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc short. Lot W2024-1177.\n\nProcess Context: Copper CMP. Edge peel.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Edge Delamination\n- **Mechanism**: Copper peeled at edge due to stress, shorting lines.\n\n## Corrective Actions\n\n1. **Anneal**: Optimize.\n2. **Validation**: Visual.\n\n**Severity**: Critical\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc pattern shift. Lot W2024-2288.\n\nProcess Context: Stepper. Edge sensor.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Sensor Glitch\n- **Mechanism**: Edge detection sensor noise caused alignment shift for edge die.\n\n## Corrective Actions\n\n1. **Replace**: Sensor.\n2. **Validation**: Overlay.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc particle cluster. Lot W2024-3399.\n\nProcess Context: Loadlock. Valve.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gate Valve Rub\n- **Mechanism**: Gate valve o-ring rubbing generated particles near door.\n\n## Corrective Actions\n\n1. **Lube/Replace**: O-ring.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc contamination. Lot W2024-4400.\n\nProcess Context: End effector. Pad.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dirty End Effector\n- **Mechanism**: Contaminated robot pad transferred material to wafer edge.\n\n## Corrective Actions\n\n1. **Clean**: Pads.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc blistering. Lot W2024-5511.\n\nProcess Context: Anneal. Clamp.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Heat Sink\n- **Mechanism**: Clamp cooled wafer edge locally, preventing proper cure/outgassing.\n\n## Corrective Actions\n\n1. **Profile**: Temp.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc void. Lot W2024-6622.\n\nProcess Context: Mold. Vent.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Blocked Vent\n- **Mechanism**: Air trapped at edge due to blocked mold vent.\n\n## Corrective Actions\n\n1. **Clean**: Mold.\n2. **Validation**: X-ray.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc dishing. Lot W2024-7733.\n\nProcess Context: CMP. Ring wear.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Local Ring Wear\n- **Mechanism**: Notch in retaining ring caused flow change and dishing.\n\n## Corrective Actions\n\n1. **Replace**: Ring.\n2. **Validation**: Profile.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc metal stringer. Lot W2024-8844.\n\nProcess Context: Etch. Shadow.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Shadow\n- **Mechanism**: Clamp shadowed etch, leaving metal stringer.\n\n## Corrective Actions\n\n1. **Align**: Clamp.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc via open. Lot W2024-9955.\n\nProcess Context: Litho. Bubble.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Immersion Bubble\n- **Mechanism**: Air bubble in immersion water at edge blocked exposure.\n\n## Corrective Actions\n\n1. **Degas**: Water.\n2. **Validation**: Defect.\n\n**Severity**: Critical\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc poly residue. Lot W2024-0066.\n\nProcess Context: Etch. Focus ring.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chipped Focus Ring\n- **Mechanism**: Chip in focus ring altered plasma sheath locally.\n\n## Corrective Actions\n\n1. **Replace**: Ring.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc scratch cluster. Lot W2024-1177.\n\nProcess Context: Cassette. Warped slot.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Warped Slot\n- **Mechanism**: Heat warped one cassette slot, scraping wafer edge.\n\n## Corrective Actions\n\n1. **Scrap**: Cassette.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge loc implant damage. Lot W2024-2288.\n\nProcess Context: Implant. Charging.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Local Charging\n- **Mechanism**: Poor grounding at clamp caused local discharge damage.\n\n## Corrective Actions\n\n1. **Check**: Ground.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 2%"
+  }
+]

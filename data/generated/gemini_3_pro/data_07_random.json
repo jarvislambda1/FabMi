@@ -1,0 +1,227 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Thousands of small particles distributed randomly across entire wafer. Lot W2024-5591. Yield 0%.\n\nProcess Context: Tool: CVD-AMAT-02. Last PM: 5,000 RF-hours ago (Overdue). Chamber clean skipped.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chamber Wall Flaking (Dirty Chamber)\n- **Mechanism**: The chamber has accumulated excessive deposition film on the walls (overdue PM). Stress in this film caused it to crack and flake off, showering the wafer with particles.\n\n## Corrective Actions\n\n1. **Tool Down**: Immediate PM.\n2. **Clean**: Wet clean all chamber shields.\n3. **Validation**: Particle monitor (<10 adders).\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random embedded particles in film. Lot W2024-3311.\n\nProcess Context: Tool: PVD-AMAT-05. Gas line filter delta-P is high.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Line Filter Breakthrough\n- **Mechanism**: The high pressure drop (delta-P) across the incoming gas filter suggests it is clogged. A pressure surge likely forced particles through the filter media.\n\n## Corrective Actions\n\n1. **Replace**: Change Point-of-Use (POU) gas filter.\n2. **Validation**: Gas particle count test.\n\n**Severity**: Major\n**Yield Impact**: 25%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random water spots. Lot W2024-4422.\n\nProcess Context: Dryer. IPA flow low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Incomplete Drying\n- **Mechanism**: Low IPA flow in Marangoni dryer left water droplets randomly on surface.\n\n## Corrective Actions\n\n1. **Refill**: IPA.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random resist specks. Lot W2024-5533.\n\nProcess Context: Coater. Splash back.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cup Splash Back\n- **Mechanism**: High spin speed caused resist mist to bounce off cup walls back onto wafer.\n\n## Corrective Actions\n\n1. **Clean**: Cup.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random bridging. Lot W2024-6644.\n\nProcess Context: Etch. Polymer.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Polymer Micromasking\n- **Mechanism**: Random polymer fall-on during etch caused micromasking and bridging.\n\n## Corrective Actions\n\n1. **Clean**: Chamber.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random voids. Lot W2024-7755.\n\nProcess Context: Gapfill. Nucleation.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Heterogeneous Nucleation\n- **Mechanism**: Surface contamination caused random nucleation issues for gapfill.\n\n## Corrective Actions\n\n1. **Clean**: Pre-clean.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random pits. Lot W2024-8866.\n\nProcess Context: Wet etch. Particles.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Bath Particles\n- **Mechanism**: Recirculation filter failure allowed particles to circulate and cause pitting.\n\n## Corrective Actions\n\n1. **Replace**: Filter.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random craters. Lot W2024-9977.\n\nProcess Context: CMP. Slurry agglomerates.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Slurry Agglomeration\n- **Mechanism**: Dried slurry chunks caused random impact craters.\n\n## Corrective Actions\n\n1. **Flush**: System.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random peeling. Lot W2024-0088.\n\nProcess Context: PVD. Substrate clean.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Patchy Adhesion\n- **Mechanism**: Non-uniform pre-clean left random patches of oxide, causing peeling.\n\n## Corrective Actions\n\n1. **Tune**: Pre-clean.\n2. **Validation**: Tape test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random hillocks. Lot W2024-1199.\n\nProcess Context: Anneal. Contamination.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Surface Contamination\n- **Mechanism**: Random organic contaminants acted as nucleation sites for hillocks.\n\n## Corrective Actions\n\n1. **Clean**: Pre-anneal.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random shorts. Lot W2024-2200.\n\nProcess Context: CMP. Copper residue.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Incomplete Polish\n- **Mechanism**: Random areas of under-polish left copper residue shorts.\n\n## Corrective Actions\n\n1. **Time**: Increase polish.\n2. **Validation**: E-test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random opens. Lot W2024-3311.\n\nProcess Context: Litho. Dust.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Airborne Particles\n- **Mechanism**: Dust in scanner environment landed on wafer before exposure.\n\n## Corrective Actions\n\n1. **Clean**: Filter/Floor.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random color shift. Lot W2024-4422.\n\nProcess Context: CVD. Gas instability.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Flow Burst\n- **Mechanism**: Random fluctuations in MFC flow caused local thickness/color changes.\n\n## Corrective Actions\n\n1. **Replace**: MFC.\n2. **Validation**: Uniformity.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random blisters. Lot W2024-5533.\n\nProcess Context: Dielectric. Outgassing.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Moisture Outgassing\n- **Mechanism**: Random voids in underlying layer trapped moisture, which blistered upon heating.\n\n## Corrective Actions\n\n1. **Bake**: Pre-dep.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random pattern distortion. Lot W2024-6644.\n\nProcess Context: Litho. Backside particles.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Backside Contamination\n- **Mechanism**: Random particles on wafer backside caused local focal plane errors.\n\n## Corrective Actions\n\n1. **Clean**: Chuck.\n2. **Validation**: Flatness.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random scratches. Lot W2024-7755.\n\nProcess Context: Handling. Dirty SMIF.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pod Contamination\n- **Mechanism**: Particles inside SMIF pod scratched wafers during transport.\n\n## Corrective Actions\n\n1. **Clean**: Pods.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random residue. Lot W2024-8866.\n\nProcess Context: Strip. Spray nozzle.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Nozzle Sputtering\n- **Mechanism**: Air in spray nozzle caused sputtering and random non-uniformity.\n\n## Corrective Actions\n\n1. **Bleed**: Line.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random missing pattern. Lot W2024-9977.\n\nProcess Context: Litho. Developer bubble.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Micro-bubbles\n- **Mechanism**: Bubbles in developer solution blocked development in random spots.\n\n## Corrective Actions\n\n1. **Degas**: Developer.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random arc tracks. Lot W2024-0088.\n\nProcess Context: Implant. Charging.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Surface Arcing\n- **Mechanism**: Charge build-up on isolated features caused random micro-arcing.\n\n## Corrective Actions\n\n1. **Gun**: Flood gun check.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random crystals. Lot W2024-1199.\n\nProcess Context: Wet bench. Precipitation.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Bath Saturation\n- **Mechanism**: Chemical bath saturated, precipitating crystals onto wafers.\n\n## Corrective Actions\n\n1. **Dump**: Change bath.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random flakes. Lot W2024-2200.\n\nProcess Context: Furnace. Quartz.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Quartz Flaking\n- **Mechanism**: Old quartz tube shedding silica flakes.\n\n## Corrective Actions\n\n1. **Clean/Replace**: Tube.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random oil spots. Lot W2024-3311.\n\nProcess Context: Vacuum. Pump backstream.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Oil Backstreaming\n- **Mechanism**: Vacuum pump oil backstreamed into chamber, condensing randomly.\n\n## Corrective Actions\n\n1. **Trap**: Foreline trap.\n2. **Validation**: RGA.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random fibers. Lot W2024-4422.\n\nProcess Context: Clean room. Wiper.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wiper Lint\n- **Mechanism**: Low quality wiper used for cleaning chamber left fibers.\n\n## Corrective Actions\n\n1. **Stock**: Change wipers.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random metal splatters. Lot W2024-5533.\n\nProcess Context: PVD. Spit.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Target Spitting\n- **Mechanism**: Arcing on target surface ejected molten metal droplets.\n\n## Corrective Actions\n\n1. **Burn-in**: Target.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random etching. Lot W2024-6644.\n\nProcess Context: Wet. Drag-out.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chemical Drag-out\n- **Mechanism**: Chemical dripped from carrier during transfer, spotting wafers.\n\n## Corrective Actions\n\n1. **Adjust**: Tilt/Drain time.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random focus spots. Lot W2024-7755.\n\nProcess Context: Litho. Chuck burr.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chuck Particles\n- **Mechanism**: Random particles on chuck caused local defocus.\n\n## Corrective Actions\n\n1. **Clean**: Chuck.\n2. **Validation**: Flatness.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random stains. Lot W2024-8866.\n\nProcess Context: SRD. Filter.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dirty N2 Filter\n- **Mechanism**: Contaminated N2 filter in dryer blew particles/oil onto wafers.\n\n## Corrective Actions\n\n1. **Replace**: Filter.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random mouse bites. Lot W2024-9977.\n\nProcess Context: Etch. Adhesion.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Mask Adhesion Loss\n- **Mechanism**: Random spots of photoresist lifted during etch, causing pits.\n\n## Corrective Actions\n\n1. **Prime**: HMDS.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random crystals (Ammonium). Lot W2024-0088.\n\nProcess Context: Mask shop. Haze.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Mask Haze\n- **Mechanism**: Chemical residue on mask grew crystals, printing random defects.\n\n## Corrective Actions\n\n1. **Clean**: Mask.\n2. **Validation**: Print.\n\n**Severity**: Major\n**Yield Impact**: Repeater."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random scratches (backside). Lot W2024-1199.\n\nProcess Context: Inspect. Stage.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dirty Stage\n- **Mechanism**: Particles on inspection stage scratched backsides.\n\n## Corrective Actions\n\n1. **Clean**: Stage.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random poly stringers. Lot W2024-2200.\n\nProcess Context: Etch. Selectivity.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Topography Shadowing\n- **Mechanism**: Random high topography spots shadowed etch, leaving stringers.\n\n## Corrective Actions\n\n1. **Time**: Over-etch.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random resist pop. Lot W2024-3311.\n\nProcess Context: Implant. Cooling.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Poor Wafer Cooling\n- **Mechanism**: Random poor contact with cooling platen caused resist to burn/pop.\n\n## Corrective Actions\n\n1. **Check**: Gas pressure.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random metal voids. Lot W2024-4422.\n\nProcess Context: Anneal. Stress migration.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Stress Migration\n- **Mechanism**: High temp anneal caused random stress voiding in narrow lines.\n\n## Corrective Actions\n\n1. **Lower**: Temp.\n2. **Validation**: Reliability.\n\n**Severity**: Major\n**Yield Impact**: Reliability."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random corrosion. Lot W2024-5533.\n\nProcess Context: Ash. Chlorine.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chlorine Residue\n- **Mechanism**: Incomplete post-etch clean left Cl, causing random corrosion spots.\n\n## Corrective Actions\n\n1. **Wash**: Rinse time.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random incomplete strip. Lot W2024-6644.\n\nProcess Context: Strip. Ash rate.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Ash Rate Drop\n- **Mechanism**: Process drift caused random patches of remaining resist.\n\n## Corrective Actions\n\n1. **Time**: Increase.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random Newton rings. Lot W2024-7755.\n\nProcess Context: Gapfill. Void.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gapfill Void\n- **Mechanism**: Random voids in dielectric caused interference rings.\n\n## Corrective Actions\n\n1. **Process**: Dep-Etch-Dep.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random dopant variation. Lot W2024-8866.\n\nProcess Context: Furnace. Loading.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Depletion\n- **Mechanism**: Loading effect caused random depletion of dopant gas across load.\n\n## Corrective Actions\n\n1. **Increase**: Flow.\n2. **Validation**: Rs.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random CMP scratches. Lot W2024-9977.\n\nProcess Context: CMP. Pad conditioning.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Diamond Loss\n- **Mechanism**: Conditioner disk shedding diamonds randomly.\n\n## Corrective Actions\n\n1. **Replace**: Disk.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random thickness variation. Lot W2024-0088.\n\nProcess Context: CMP. Slurry stability.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Unstable Slurry\n- **Mechanism**: Slurry settling caused random removal rate variation.\n\n## Corrective Actions\n\n1. **Agitate**: Drum.\n2. **Validation**: Uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random bridging. Lot W2024-1199.\n\nProcess Context: Etch. Mask erosion.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Poor Selectivity\n- **Mechanism**: Mask eroded randomly, allowing bridging.\n\n## Corrective Actions\n\n1. **Recipe**: Higher selectivity.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random contact open. Lot W2024-2200.\n\nProcess Context: Wet clean. Surface tension.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Non-wetting\n- **Mechanism**: Chemicals failed to enter random contacts due to surface tension.\n\n## Corrective Actions\n\n1. **Surfactant**: Add.\n2. **Validation**: E-test.\n\n**Severity**: Critical\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random roughness. Lot W2024-3311.\n\nProcess Context: Etch. Passivation.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Insufficient Passivation\n- **Mechanism**: Lack of sidewall polymer caused random sidewall roughness.\n\n## Corrective Actions\n\n1. **Increase**: Polymer gas.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random peeling. Lot W2024-4422.\n\nProcess Context: CMP. Stress.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Shear Stress\n- **Mechanism**: CMP shear force caused random peeling of weak interface.\n\n## Corrective Actions\n\n1. **Process**: Adhesion promoter.\n2. **Validation**: Tape test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random particles. Lot W2024-5533.\n\nProcess Context: Stepper. Peltier.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Peltier Dust\n- **Mechanism**: Cooling element fan blew dust randomly.\n\n## Corrective Actions\n\n1. **Clean**: Fan/Filter.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random defect. Lot W2024-6644.\n\nProcess Context: Unknown.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Unknown/Random\n- **Mechanism**: Stochastic failure.\n\n## Corrective Actions\n\n1. **Monitor**: SPC.\n2. **Validation**: None.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  }
+]

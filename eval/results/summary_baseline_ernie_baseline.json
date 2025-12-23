@@ -1,0 +1,12 @@
+{
+  "total": 50,
+  "valid": 50,
+  "rouge1": 0.1791,
+  "rouge2": 0.0436,
+  "rougeL": 0.109,
+  "severity_accuracy": 0.1,
+  "structure_score": 0.5633,
+  "avg_latency_ms": 48665.9,
+  "model": "ernie_baseline",
+  "total_time": 627.7
+}

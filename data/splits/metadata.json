@@ -1,0 +1,24 @@
+{
+  "total_samples": 1511,
+  "train_samples": 1356,
+  "test_samples": 155,
+  "split_ratio": "90/10",
+  "duplicates_removed": 0,
+  "sources": [
+    "attempt1",
+    "attempt2",
+    "attempt4",
+    "attempt5"
+  ],
+  "defect_distribution": {
+    "center": 180,
+    "donut": 186,
+    "edge_loc": 162,
+    "edge_ring": 242,
+    "loc": 152,
+    "near_full": 147,
+    "none": 110,
+    "random": 158,
+    "scratch": 174
+  }
+}

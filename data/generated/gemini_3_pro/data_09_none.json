@@ -1,0 +1,252 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No significant defects observed. Yield is 99.5%. Lot W2024-GOOD-01.\n\nProcess Context: Tool: ETCH-LAM-07. All parameters nominal.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Normal Process Variation\n- **Analysis**: No root cause required. Wafer is within specification.\n\n## Corrective Actions\n\n1. **Release**: Release lot to next step.\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Clean wafer. Lot W2024-GOOD-02.\n\nProcess Context: Litho. Nominal.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Process in control.\n\n## Corrective Actions\n\n1. **None**: Proceed.\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Zero defects. Lot W2024-GOOD-03.\n\nProcess Context: CVD. Standard.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Nominal\n- **Analysis**: Good wafer.\n\n## Corrective Actions\n\n1. **Move**: Next step.\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Yield 99.8%. Lot W2024-GOOD-04.\n\nProcess Context: CMP. Baseline.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Acceptable.\n\n## Corrective Actions\n\n1. **Pass**: Lot.\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No visual defects. Lot W2024-GOOD-05.\n\nProcess Context: Wet clean. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Clean.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Pass. Lot W2024-GOOD-06.\n\nProcess Context: Implant. Normal.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Good lot. Lot W2024-GOOD-07.\n\nProcess Context: PVD. Stable.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Stable process.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Within spec. Lot W2024-GOOD-08.\n\nProcess Context: Etch. Control.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: In control.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Yield 98%. Lot W2024-GOOD-09.\n\nProcess Context: Sort. Good.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: High yield.\n\n## Corrective Actions\n\n1. **Ship**: Product.\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No anomalies. Lot W2024-GOOD-10.\n\nProcess Context: Inspect. Clean.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: No issues found.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Nominal result. Lot W2024-GOOD-11.\n\nProcess Context: Anneal. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Nominal.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Spec pass. Lot W2024-GOOD-12.\n\nProcess Context: Dep. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Passed specs.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Clean. Lot W2024-GOOD-13.\n\nProcess Context: Clean. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Clean.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Yield 99.9%. Lot W2024-GOOD-14.\n\nProcess Context: Final. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Excellent.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No defects. Lot W2024-GOOD-15.\n\nProcess Context: Step 5. OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: No defects.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Baseline. Lot W2024-GOOD-16.\n\nProcess Context: Baseline run.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: At baseline.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Control lot pass. Lot W2024-GOOD-17.\n\nProcess Context: Monitor.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Passed.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Normal. Lot W2024-GOOD-18.\n\nProcess Context: Routine.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Normal.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: OK. Lot W2024-GOOD-19.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Good. Lot W2024-GOOD-20.\n\nProcess Context: Good.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Good.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No excursion. Lot W2024-GOOD-21.\n\nProcess Context: Stable.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Stable.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Yield target met. Lot W2024-GOOD-22.\n\nProcess Context: Target.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Met.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Quality pass. Lot W2024-GOOD-23.\n\nProcess Context: QC.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Within limits. Lot W2024-GOOD-24.\n\nProcess Context: SPC.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Within limits.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: All clear. Lot W2024-GOOD-25.\n\nProcess Context: Clear.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Clear.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: No defect found. Lot W2024-GOOD-26.\n\nProcess Context: NDF.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: NDF.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Perfect run. Lot W2024-GOOD-27.\n\nProcess Context: Perfect.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Perfect.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Flawless. Lot W2024-GOOD-28.\n\nProcess Context: Flawless.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Flawless.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Top yield. Lot W2024-GOOD-29.\n\nProcess Context: Top.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Top.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Golden wafer. Lot W2024-GOOD-30.\n\nProcess Context: Gold.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Golden.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Reference pass. Lot W2024-GOOD-31.\n\nProcess Context: Ref.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Standard pass. Lot W2024-GOOD-32.\n\nProcess Context: Std.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Routine pass. Lot W2024-GOOD-33.\n\nProcess Context: Routine.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Check pass. Lot W2024-GOOD-34.\n\nProcess Context: Check.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Monitor pass. Lot W2024-GOOD-35.\n\nProcess Context: Monitor.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Qual pass. Lot W2024-GOOD-36.\n\nProcess Context: Qual.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Sys check pass. Lot W2024-GOOD-37.\n\nProcess Context: Sys.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: Pass.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Process ok. Lot W2024-GOOD-38.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Tool ok. Lot W2024-GOOD-39.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Chamber ok. Lot W2024-GOOD-40.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Recipe ok. Lot W2024-GOOD-41.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Setup ok. Lot W2024-GOOD-42.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Param ok. Lot W2024-GOOD-43.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Env ok. Lot W2024-GOOD-44.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Chem ok. Lot W2024-GOOD-45.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Gas ok. Lot W2024-GOOD-46.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Temp ok. Lot W2024-GOOD-47.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Press ok. Lot W2024-GOOD-48.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Time ok. Lot W2024-GOOD-49.\n\nProcess Context: OK.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: OK.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: End. Lot W2024-GOOD-50.\n\nProcess Context: End.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: None\n- **Analysis**: End.\n\n## Corrective Actions\n\n1. **None**: .\n\n**Severity**: None\n**Yield Impact**: 0%"
+  }
+]

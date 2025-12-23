@@ -1,0 +1,202 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Circular defect cluster in center (0-30mm) of Lot W2024-3392. Film thickness is 8% thinner at center.\n\nProcess Context: Tool: CVD-AMAT-03 (TEOS). Showerhead cleaned 3 months ago.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clogged Showerhead (Center Zone)\n- **Mechanism**: Blocked holes in the center of the gas distribution showerhead reduce precursor flow to the wafer center.\n- **Evidence**: Center thickness -8% vs edge (Spec <2%).\n\n## Corrective Actions\n\n1. **Clean**: Ultrasonic clean showerhead.\n2. **Inspect**: Back-light inspection of holes.\n3. **Validation**: 49-point uniformity check.\n\n## Prevention Measures\n- **PM**: Reduce clean interval to 2.5 months.\n\n**Severity**: Major\n**Yield Impact**: 12%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center of wafer out of focus (CD errors). Lot W2024-6601.\n\nProcess Context: Tool: LITH-ASML-02. Intermittent chuck vacuum alarms.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chuck Vacuum Leak / Particle\n- **Mechanism**: Particle trapped under wafer center or vacuum leak causes wafer bowing, moving the surface out of focal plane.\n- **Evidence**: Vacuum alarms confirm sealing issue.\n\n## Corrective Actions\n\n1. **Clean**: Stone clean wafer chuck.\n2. **Validation**: FEM (Focus-Exposure Matrix) wafer.\n\n## Prevention Measures\n- **Cleaning**: Increase auto-clean frequency.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Center dies)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: SOG thickness high in center ('mound'). Lot W2024-2291.\n\nProcess Context: Tool: TRK-TEL-08 (Coater). Exhaust pressure fluctuating.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Unstable Cup Exhaust\n- **Mechanism**: Low exhaust pressure slows solvent evaporation at the center of the wafer during spin, leading to thicker film.\n- **Correlation**: Pressure fluctuations match defect onset.\n\n## Corrective Actions\n\n1. **Adjust**: Reset cup exhaust damper (-20 Pa).\n2. **Validation**: Radial thickness profile.\n\n## Prevention Measures\n- **Interlock**: Add exhaust pressure interlock.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Circular haze in center after CMP. Lot W2024-9910.\n\nProcess Context: Tool: CMP-AMAT-05. Center slurry nozzle flow at 50%.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Slurry Starvation (Center)\n- **Mechanism**: Clogged center slurry nozzle reduces lubrication/chemistry, causing mechanical haze.\n- **Evidence**: Flow rate 50% of setpoint.\n\n## Corrective Actions\n\n1. **Flush**: Purge slurry lines.\n2. **Replace**: Change nozzle tip/filter.\n3. **Validation**: Monitor wafer for haze.\n\n## Prevention Measures\n- **Hardware**: Install flow meter interlock.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Refractive index shift in center 50mm. Lot W2024-7712.\n\nProcess Context: Tool: CVD-LAM-05. Heater lamp replaced recently.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Heater Cold Spot\n- **Mechanism**: Improper calibration of the new center zone lamp is causing lower process temperature at the center.\n- **Correlation**: Linked to recent lamp replacement.\n\n## Corrective Actions\n\n1. **Calibrate**: Run TC (Thermocouple) wafer.\n2. **Adjust**: Increase center zone power offset.\n3. **Validation**: RI uniformity check.\n\n## Prevention Measures\n- **Protocol**: Mandate TC wafer after lamp changes.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center spot defect (5mm). Lot W2024-1111.\n\nProcess Context: Wet-Clean-DNS-01. Spin dry nozzle dripped.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Nozzle Drip (Post-Process)\n- **Mechanism**: DI water dripped from the center nozzle after spin dry completed, leaving a water mark/residue spot in the exact center.\n\n## Corrective Actions\n\n1. **Fix**: Repair suck-back valve.\n2. **Validation**: Dry cycle test.\n\n**Severity**: Major\n**Yield Impact**: 100% (Center die)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: High center etch rate (+10%). Lot W2024-2222.\n\nProcess Context: ETCH-TEL-09. Center gas injection flow high.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: MFC Calibration Drift (Center)\n- **Mechanism**: The Mass Flow Controller for center gas injection drifted high, increasing reactant concentration at the center.\n\n## Corrective Actions\n\n1. **Calibrate**: Re-cal MFC.\n2. **Validation**: Rate check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center die yield loss. Open circuits. Lot W2024-3333.\n\nProcess Context: CMP-EBRA-03. Center zone pressure high.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Over-polish (Center Dishing)\n- **Mechanism**: Excessive downforce in the center zone caused dishing of copper lines, leading to opens.\n\n## Corrective Actions\n\n1. **Reduce**: Lower center zone pressure.\n2. **Validation**: Profilometry.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center particle cluster. Lot W2024-4444.\n\nProcess Context: PVD-AMAT-06. Target clamp loose.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Target Clamp Particle Gen\n- **Mechanism**: A loose clamp allowed slight movement/arcing at the target center, dropping particles directly below onto the wafer center.\n\n## Corrective Actions\n\n1. **Tighten**: Torque target clamp.\n2. **Validation**: Particle monitor.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Thermal shock pattern at center. Lot W2024-5555.\n\nProcess Context: RTP-AST-01. Pyrometer reading low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pyrometer Error / Overheating\n- **Mechanism**: The center pyrometer read falsely low, causing the control loop to drive the center lamps to max power, overheating/shocking the wafer center.\n\n## Corrective Actions\n\n1. **Calibrate**: Pyrometer calibration.\n2. **Validation**: Temp monitor wafer.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center resist thickness low. Lot W2024-6666.\n\nProcess Context: Coater-TEL-05. Dispense volume low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Insufficient Dispense Volume\n- **Mechanism**: Dispense pump did not supply enough resist to fully cover the wafer before spin, leaving the center thin.\n\n## Corrective Actions\n\n1. **Adjust**: Increase pump volume.\n2. **Validation**: Thickness check.\n\n**Severity**: Major\n**Yield Impact**: 100% (Reworkable)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center discoloration. Lot W2024-7777.\n\nProcess Context: Ash-Gasonic-02. Baffle plate hole enlarged.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Plasma Erosion (Baffle)\n- **Mechanism**: Erosion of the center hole in the baffle plate allowed direct ion bombardment of the wafer center, causing damage/color change.\n\n## Corrective Actions\n\n1. **Replace**: Baffle plate.\n2. **Validation**: Ash rate uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center defocus. Lot W2024-8888.\n\nProcess Context: LITH-NIKON-01. Chuck flatness out of spec.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chuck Non-flatness\n- **Mechanism**: Physical deformation or wear of the wafer chuck at the center caused the wafer to sit high/low, out of focus.\n\n## Corrective Actions\n\n1. **Replace**: Wafer chuck.\n2. **Validation**: Flatness test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center lift. Lot W2024-9999.\n\nProcess Context: PVD-AMAT-01. Pre-clean etch low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Insufficient Pre-clean\n- **Mechanism**: The center of the wafer was not fully cleaned (oxide removal) due to non-uniform pre-clean etch, leading to peeling/lifting.\n\n## Corrective Actions\n\n1. **Tune**: Adjust pre-clean uniformity.\n2. **Validation**: Adhesion test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center bubble in resist. Lot W2024-0000.\n\nProcess Context: Coater-TEL-03. Suck-back too fast.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Air Injection / Suck-back\n- **Mechanism**: Aggressive suck-back pulled air into the nozzle tip, which was dispensed as a bubble in the center of the next wafer.\n\n## Corrective Actions\n\n1. **Adjust**: Reduce suck-back speed/volume.\n2. **Validation**: Visual check.\n\n**Severity**: Major\n**Yield Impact**: 100% (Reworkable)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center scratch (Circular). Lot W2024-1112.\n\nProcess Context: Wet-Bench-04. Wand handle touched wafer.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Manual Handling Error\n- **Mechanism**: Operator or robot wand touched the center of the wafer during transfer.\n\n## Corrective Actions\n\n1. **Train**: Retrain operator.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center under-etch. Lot W2024-2223.\n\nProcess Context: Etch-LAM-05. Center gas feed low.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Starvation (Center)\n- **Mechanism**: Low flow of etchant gas to the center caused incomplete etch.\n\n## Corrective Actions\n\n1. **Check**: Gas line obstruction.\n2. **Validation**: Uniformity.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center spike defect. Lot W2024-3334.\n\nProcess Context: Epi-ASM-01. Showerhead dripped.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Condensation/Drip\n- **Mechanism**: Precursor condensed on the cool showerhead face and dripped onto the hot wafer center, growing a large spike.\n\n## Corrective Actions\n\n1. **Temp**: Increase showerhead temp.\n2. **Validation**: Defect monitor.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center voids. Lot W2024-4445.\n\nProcess Context: ECP-LAM-02. Center jet blocked.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Flow Impingement Failure\n- **Mechanism**: Blocked center jet reduced electrolyte replenishment at the center, leading to voids in high aspect ratio fills.\n\n## Corrective Actions\n\n1. **Clean**: Unclog jet.\n2. **Validation**: Plating test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center bridge. Lot W2024-5556.\n\nProcess Context: LITH-ASML-08. Focus offset error.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Focus Offset\n- **Mechanism**: Incorrect focus offset placed the aerial image in the wrong plane, causing lines to bridge at the center.\n\n## Corrective Actions\n\n1. **Calibrate**: Focus offset.\n2. **Validation**: FEM.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center hole not open. Lot W2024-6667.\n\nProcess Context: Etch-TEL-02. Polymer buildup center.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Polymer Redeposition\n- **Mechanism**: Excessive polymer formation in the center (due to thermal or gas dynamics) stopped the etch before clearing.\n\n## Corrective Actions\n\n1. **Adjust**: Reduce C4F8 flow.\n2. **Validation**: Cross-section.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center haze. Lot W2024-7778.\n\nProcess Context: CMP-AMAT-09. Center head water leak.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Water Leak in Head\n- **Mechanism**: DI water leaking from the head back-pressure system diluted the slurry at the center, causing haze.\n\n## Corrective Actions\n\n1. **Fix**: Repair bladder seal.\n2. **Validation**: Haze check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center bump. Lot W2024-8889.\n\nProcess Context: PVD-AMAT-04. Wafer bowed.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wafer Bowing / ESC Failure\n- **Mechanism**: ESC failed to clamp wafer flat. Bowing caused the center to be closer/further from target, changing stress/thickness.\n\n## Corrective Actions\n\n1. **Check**: ESC HV supply.\n2. **Validation**: Clamp test.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center contamination. Lot W2024-9990.\n\nProcess Context: Robot-01. Dropped particle from blade.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Transport Contamination\n- **Mechanism**: Particle accumulated on the robot blade above the wafer center fell off during transport.\n\n## Corrective Actions\n\n1. **Clean**: Wipe robot blade.\n2. **Validation**: Particle check.\n\n**Severity**: Minor\n**Yield Impact**: 1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center roughness. Lot W2024-0001.\n\nProcess Context: Etch-LAM-07. Source power noise.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: RF Source Instability\n- **Mechanism**: Unstable source power caused plasma fluctuation, roughening the surface.\n\n## Corrective Actions\n\n1. **Fix**: RF match/generator.\n2. **Validation**: Surface roughness measure.\n\n**Severity**: Major\n**Yield Impact**: 3%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center peeling. Lot W2024-1113.\n\nProcess Context: Furnace-TEL-03. Center zone temp low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Incomplete Cure\n- **Mechanism**: Low temperature in the center zone led to incomplete film curing/annealing, causing peeling later.\n\n## Corrective Actions\n\n1. **Calibrate**: Heater spike TC.\n2. **Validation**: Stress measurement.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center dimple. Lot W2024-2224.\n\nProcess Context: Electroplating. Bubble trapped.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Trapped Bubble\n- **Mechanism**: An air bubble was trapped at the wafer center upon entry into the plating bath, preventing plating in that spot.\n\n## Corrective Actions\n\n1. **Adjust**: Entry profile/tilt angle.\n2. **Validation**: Defect map.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center thickness spike. Lot W2024-3335.\n\nProcess Context: CVD-TEL-01. Gas stabilization error.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Burst\n- **Mechanism**: Poor stabilization caused a burst of precursor gas at step start, depositing extra material in the center.\n\n## Corrective Actions\n\n1. **Tune**: Stabilization time.\n2. **Validation**: Thickness profile.\n\n**Severity**: Minor\n**Yield Impact**: 2%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center pitting. Lot W2024-4446.\n\nProcess Context: Wet-Clean-02. Megasonic power high.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Megasonic Damage\n- **Mechanism**: Excessive acoustic energy (cavitation) caused pattern collapse or pitting at the wafer center.\n\n## Corrective Actions\n\n1. **Lower**: Megasonic power.\n2. **Validation**: Pattern damage check.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center starburst pattern. Lot W2024-5557.\n\nProcess Context: Spin-Dryer-01. Stress fracture.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Mechanical Stress\n- **Mechanism**: Excessive spin speed or clamp stress caused a micro-crack initiating at the center.\n\n## Corrective Actions\n\n1. **Check**: Rotor balance/clamp.\n2. **Validation**: Spin test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center resist scum. Lot W2024-6668.\n\nProcess Context: Dev-TEL-04. Nozzle clog.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Developer Nozzle Clog\n- **Mechanism**: Partial clog in developer nozzle reduced flow to center, leaving scum.\n\n## Corrective Actions\n\n1. **Clean**: Developer nozzle.\n2. **Validation**: Scum check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center CD small. Lot W2024-7779.\n\nProcess Context: Bake-Plate-05. Cold center.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Hot Plate Non-uniformity\n- **Mechanism**: Center of the PEB plate was cooler than edge, reducing acid diffusion and CD size.\n\n## Corrective Actions\n\n1. **Calibrate**: Hot plate temp.\n2. **Validation**: CD map.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center metal residue. Lot W2024-8880.\n\nProcess Context: Etch-AMAT-03. Endpoint triggered early.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Premature Endpoint\n- **Mechanism**: Endpoint system triggered before center cleared (bullseye effect).\n\n## Corrective Actions\n\n1. **Adjust**: Add over-etch time.\n2. **Validation**: Residue check.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center cloudy. Lot W2024-9991.\n\nProcess Context: RTP-02. Gas purity low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Contaminated Process Gas\n- **Mechanism**: Moisture in N2 supply caused center cloudiness during anneal.\n\n## Corrective Actions\n\n1. **Purge**: Gas lines.\n2. **Validation**: Haze monitor.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center circular scratch. Lot W2024-0002.\n\nProcess Context: CMP-01. Membrane rupture.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Carrier Membrane Failure\n- **Mechanism**: Ruptured membrane allowed hard backing plate to touch wafer center.\n\n## Corrective Actions\n\n1. **Replace**: Membrane.\n2. **Validation**: Visual.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center dopant low. Lot W2024-1114.\n\nProcess Context: IMP-03. Beam dropout.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Beam Instability\n- **Mechanism**: Beam glitched while scanning center.\n\n## Corrective Actions\n\n1. **Tune**: Source.\n2. **Validation**: Rs map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center hole deformation. Lot W2024-2225.\n\nProcess Context: LITH-04. Lens heating.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Lens Aberration (Thermal)\n- **Mechanism**: High dose heating caused lens distortion affecting center field.\n\n## Corrective Actions\n\n1. **Compensate**: Lens controller.\n2. **Validation**: Distortion test.\n\n**Severity**: Minor\n**Yield Impact**: 1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center nitride stress high. Lot W2024-3336.\n\nProcess Context: CVD-05. RF power mismatch.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: RF Power Distribution\n- **Mechanism**: Incorrect LF/HF ratio changed film stress at center.\n\n## Corrective Actions\n\n1. **Calibrate**: RF match.\n2. **Validation**: Stress bow check.\n\n**Severity**: Major\n**Yield Impact**: Warpage risk."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center via blocked. Lot W2024-4447.\n\nProcess Context: Clean-06. Surface tension high.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wetting Failure\n- **Mechanism**: Chemicals failed to enter small vias at center due to surface tension.\n\n## Corrective Actions\n\n1. **Add**: Surfactant.\n2. **Validation**: E-test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center alignment error. Lot W2024-5558.\n\nProcess Context: Scan-07. Wafer expansion.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Thermal Expansion\n- **Mechanism**: Wafer was hot during alignment, causing scaling error at center.\n\n## Corrective Actions\n\n1. **Cool**: Increase cooling time.\n2. **Validation**: Overlay.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  }
+]

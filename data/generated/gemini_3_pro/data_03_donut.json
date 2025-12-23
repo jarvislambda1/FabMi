@@ -1,0 +1,237 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Ring-shaped defect pattern observed at mid-radius (R=75mm). Center and edge are clean. Lot W2024-8112.\n\nProcess Context: Tool: ETCH-TEL-05. ESC (Electrostatic Chuck) has dual-zone cooling. Helium flow rate for Inner Zone is unstable.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: ESC Dual-Zone Cooling Failure (Inner/Outer Interface)\n- **Mechanism**: The defect ring matches the interface between the inner and outer cooling zones of the chuck. Unstable Helium flow causes a temperature discontinuity at this boundary, affecting etch rate selectivity.\n- **Correlation**: Radial position of defect (75mm) aligns with ESC zone boundary.\n\n## Corrective Actions\n\n1. **Leak Check**: Test ESC He circuits.\n2. **Calibrate**: Re-calibrate Mass Flow Controllers (MFCs) for both zones.\n3. **Validation**: Etch rate uniformity wafer.\n\n## Prevention Measures\n- **FDC**: Monitor Zone 1 vs Zone 2 He flow delta.\n\n**Severity**: Major\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: 'Donut' of unstripped photoresist. Lot W2024-3321. Radius 50-100mm.\n\nProcess Context: Tool: ASHER-GASONIC-01. Baffle plate replaced during PM.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Baffle Plate Installation\n- **Mechanism**: The baffle plate distributes plasma/gas. If installed upside down or misaligned, it creates a 'dead zone' in the mid-radius where strip rate is low.\n- **Correlation**: Occurred right after PM involving baffle change.\n\n## Corrective Actions\n\n1. **Inspect**: Check baffle orientation.\n2. **Validation**: Ash rate monitor.\n\n## Prevention Measures\n- **SOP**: Add visual guide for baffle orientation to PM checklist.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Reworkable)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Circular region of pits/defects at 40mm radius. Lot W2024-1101.\n\nProcess Context: Tool: CMP-AMAT-02. Retaining ring pressure oscillating.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Retaining Ring Stick-Slip / Vibration\n- **Mechanism**: Oscillating pressure suggests the retaining ring (holding wafer in carrier) is vibrating or sticking, causing localized mechanical damage in a ring pattern.\n\n## Corrective Actions\n\n1. **Replace**: Change Retaining Ring and membrane.\n2. **Validation**: Monitor head pressure stability.\n\n**Severity**: Major\n**Yield Impact**: 12%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Mid-radius uniformity dip. Lot W2024-5511.\n\nProcess Context: CVD-01. Showerhead zone 2 blocked.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Showerhead Zone Blockage\n- **Mechanism**: Blocked holes in the middle zone of the showerhead reduced deposition rate in the donut region.\n\n## Corrective Actions\n\n1. **Clean**: Showerhead.\n2. **Validation**: Thickness map.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut peeling. Lot W2024-6622.\n\nProcess Context: PVD-03. Magnetron rotation stall.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Magnetron Stall\n- **Mechanism**: Magnetron stalled over the mid-radius track, causing excessive heating and stress, leading to peeling.\n\n## Corrective Actions\n\n1. **Repair**: Magnetron drive.\n2. **Validation**: Rotation check.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Ring of particles R=80mm. Lot W2024-7733.\n\nProcess Context: Cleaning-05. Tank level low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Fluid Level / Meniscus\n- **Mechanism**: Low tank level caused the liquid meniscus to sit on the wafer surface at R=80mm, depositing particles.\n\n## Corrective Actions\n\n1. **Refill**: Tank.\n2. **Validation**: Level sensor check.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Etch donut pattern. Lot W2024-8844.\n\nProcess Context: Etch-02. Magnetic field drift.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: B-Field Non-uniformity\n- **Mechanism**: Drift in the magnetic confinement coils altered plasma density in a ring shape.\n\n## Corrective Actions\n\n1. **Calibrate**: Gauss meter check.\n2. **Validation**: Etch uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut discoloration. Lot W2024-9955.\n\nProcess Context: RTP-01. Lamp zone 3 failure.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Zone Lamp Failure\n- **Mechanism**: Failure of the lamp ring corresponding to the mid-radius caused a cold donut zone.\n\n## Corrective Actions\n\n1. **Replace**: Lamps.\n2. **Validation**: Temp profile.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut CD variation. Lot W2024-0066.\n\nProcess Context: Develop-04. Nozzle arm scan speed.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Scan Speed Non-linearity\n- **Mechanism**: Developer arm slowed down at mid-radius, increasing develop time locally.\n\n## Corrective Actions\n\n1. **Tune**: Arm motor profile.\n2. **Validation**: CD map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Ring of residue. Lot W2024-1177.\n\nProcess Context: CMP-02. Pad groove clogged.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pad Glazing (Ring)\n- **Mechanism**: Conditioner failed to refresh the pad at a specific radius, leading to residue accumulation.\n\n## Corrective Actions\n\n1. **Condition**: Aggressive sweep.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Mid-wafer scratch ring. Lot W2024-2288.\n\nProcess Context: Transport. FOUP warped.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: FOUP Warpage\n- **Mechanism**: Warped FOUP shelf touched wafer bottom at mid-radius during robot insertion.\n\n## Corrective Actions\n\n1. **Scrap**: FOUP.\n2. **Validation**: Transfer test.\n\n**Severity**: Major\n**Yield Impact**: Backside damage."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut blister pattern. Lot W2024-3399.\n\nProcess Context: Implanter. Disk cooling channel blocked.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cooling Blockage\n- **Mechanism**: Blocked cooling channel under the disk caused a hot ring zone, leading to resist blistering.\n\n## Corrective Actions\n\n1. **Clean**: Cooling loop.\n2. **Validation**: Flow check.\n\n**Severity**: Major\n**Yield Impact**: 100% (Reworkable)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut haze. Lot W2024-4400.\n\nProcess Context: Deposition. Gas inlet ring dirty.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Inlet Contamination\n- **Mechanism**: Particles shedding from a dirty gas injection ring deposited in a circular pattern.\n\n## Corrective Actions\n\n1. **Clean**: Injector ring.\n2. **Validation**: Particle check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut thickness low. Lot W2024-5511.\n\nProcess Context: CMP. Zone 2 pressure low.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Zone Pressure Mismatch\n- **Mechanism**: Low pressure in carrier head Zone 2 reduced removal rate in the donut region.\n\n## Corrective Actions\n\n1. **Calibrate**: Head pressure.\n2. **Validation**: Uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut bridging. Lot W2024-6622.\n\nProcess Context: Litho. Lens flare.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Lens Flare / Ghost\n- **Mechanism**: Internal reflection in the lens system caused a ring of background light (flare), reducing contrast and causing bridging.\n\n## Corrective Actions\n\n1. **Service**: Lens coating check.\n2. **Validation**: Contrast test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut voiding. Lot W2024-7733.\n\nProcess Context: Plating. Anode shield misaligned.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Field Shielding Error\n- **Mechanism**: Misaligned anode shield blocked current to the mid-radius, causing voids.\n\n## Corrective Actions\n\n1. **Align**: Anode shield.\n2. **Validation**: Plating map.\n\n**Severity**: Critical\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut roughness. Lot W2024-8844.\n\nProcess Context: Etch. Polymer mode transition.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Plasma Mode Hop\n- **Mechanism**: Plasma instability caused a transition between polymerizing and etching modes in a specific radial zone.\n\n## Corrective Actions\n\n1. **Tune**: Pressure/Power.\n2. **Validation**: Surface check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut stress lines. Lot W2024-9955.\n\nProcess Context: Anneal. Cool-down non-uniformity.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Uneven Cooling\n- **Mechanism**: Gas flow during cool-down was biased, cooling a ring area faster and inducing stress.\n\n## Corrective Actions\n\n1. **Adjust**: Cool-down gas flow.\n2. **Validation**: Stress map.\n\n**Severity**: Minor\n**Yield Impact**: Warpage."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut dopant spike. Lot W2024-0066.\n\nProcess Context: Implant. Scan overlap.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Scan Overlap Error\n- **Mechanism**: Overlap of 2D mechanical scan pattern created a dose spike in a ring.\n\n## Corrective Actions\n\n1. **Adjust**: Scan pitch.\n2. **Validation**: Dose map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut resist thickness high. Lot W2024-1177.\n\nProcess Context: Coater. Solvent shock.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Solvent Shock\n- **Mechanism**: Airflow disruption during spin caused a solvent concentration wave (ridge) at mid-radius.\n\n## Corrective Actions\n\n1. **Check**: Cup exhaust.\n2. **Validation**: Thickness.\n\n**Severity**: Minor\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut contact resistance high. Lot W2024-2288.\n\nProcess Context: Pre-clean. Plasma distribution.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pre-clean Non-uniformity\n- **Mechanism**: Plasma density dip at mid-radius led to insufficient oxide removal.\n\n## Corrective Actions\n\n1. **Tune**: Coil power.\n2. **Validation**: Rc map.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut etch stop. Lot W2024-3399.\n\nProcess Context: Etch. Load effect.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Macro-loading Effect\n- **Mechanism**: Byproduct accumulation in the mid-radius zone slowed the etch rate to a stop.\n\n## Corrective Actions\n\n1. **Increase**: Total gas flow.\n2. **Validation**: Etch depth.\n\n**Severity**: Major\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut pitting. Lot W2024-4400.\n\nProcess Context: Wet etch. Agitation failure.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Poor Agitation\n- **Mechanism**: Lack of agitation allowed bubbles to stick to the wafer surface in a ring pattern, causing pitting.\n\n## Corrective Actions\n\n1. **Fix**: Agitator/Recirc pump.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut adhesion loss. Lot W2024-5511.\n\nProcess Context: Glue layer. Thickness dip.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Glue Layer Insufficiency\n- **Mechanism**: TiN glue layer was too thin in the donut zone, causing W film to peel.\n\n## Corrective Actions\n\n1. **Adjust**: Deposition profile.\n2. **Validation**: Tape test.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut CD large. Lot W2024-6622.\n\nProcess Context: Bake. Heater zone 2 high.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Bake Plate Hot Zone\n- **Mechanism**: Zone 2 of the bake plate was too hot, increasing acid diffusion and CD size.\n\n## Corrective Actions\n\n1. **Calibrate**: Zone temp.\n2. **Validation**: CD.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut scum. Lot W2024-7733.\n\nProcess Context: Develop. Spray puddle.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Puddle Collapse\n- **Mechanism**: Developer puddle broke/collapsed at mid-radius, leading to under-development.\n\n## Corrective Actions\n\n1. **Adjust**: Dispense speed.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut oxide loss. Lot W2024-8844.\n\nProcess Context: CMP. Erosion.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Selective Erosion\n- **Mechanism**: Pattern density combined with pad flexibility caused erosion ring.\n\n## Corrective Actions\n\n1. **Change**: Harder pad.\n2. **Validation**: Profilometer.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut particles. Lot W2024-9955.\n\nProcess Context: Sorter. Aligning.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aligner Contamination\n- **Mechanism**: Dirty aligner chuck transferred particles in a ring pattern.\n\n## Corrective Actions\n\n1. **Clean**: Aligner chuck.\n2. **Validation**: Particle check.\n\n**Severity**: Major\n**Yield Impact**: 3%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut implant channeling. Lot W2024-0066.\n\nProcess Context: Implant. Tilt angle error.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Tilt Angle Variation\n- **Mechanism**: Scanning system variation changed effective tilt angle at mid-wafer, allowing channeling.\n\n## Corrective Actions\n\n1. **Calibrate**: Scan mechanism.\n2. **Validation**: Rs map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut incomplete fill. Lot W2024-1177.\n\nProcess Context: Gapfill. Flow ratio.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Flow Ratio\n- **Mechanism**: O3/TEOS ratio non-uniformity caused voiding in donut zone.\n\n## Corrective Actions\n\n1. **Tune**: Injector flows.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut spacer width variation. Lot W2024-2288.\n\nProcess Context: Etch. Temp gradient.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chuck Temp Gradient\n- **Mechanism**: Radial temperature gradient on chuck altered etch selectivity.\n\n## Corrective Actions\n\n1. **Check**: Coolant flow.\n2. **Validation**: Spacer width.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut silicide missing. Lot W2024-3399.\n\nProcess Context: Pre-clean. Sputter etch.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Over-etch\n- **Mechanism**: Aggressive pre-clean removed source/drain silicon in donut zone.\n\n## Corrective Actions\n\n1. **Reduce**: Etch time.\n2. **Validation**: Cross-section.\n\n**Severity**: Critical\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut polymer. Lot W2024-4400.\n\nProcess Context: Etch. Wall deposition.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chamber State\n- **Mechanism**: Polymer flaking from chamber ceiling in a ring pattern.\n\n## Corrective Actions\n\n1. **Clean**: Chamber.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut overlay error. Lot W2024-5511.\n\nProcess Context: Scanner. Lens heating.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Lens Heating distortion\n- **Mechanism**: High throughput heating caused dipole distortion in lens.\n\n## Corrective Actions\n\n1. **Slow**: Throughput.\n2. **Validation**: Overlay.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut hillocks. Lot W2024-6622.\n\nProcess Context: Metal Dep. Stress.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Stress Relief Hillocks\n- **Mechanism**: Compressive stress peak in donut zone caused Al hillock growth.\n\n## Corrective Actions\n\n1. **Lower**: Dep temp.\n2. **Validation**: Microscope.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut via resistance high. Lot W2024-7733.\n\nProcess Context: Barrier Dep. Coverage.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Poor Step Coverage\n- **Mechanism**: Geometric shadowing in donut zone reduced barrier thickness at via bottom.\n\n## Corrective Actions\n\n1. **Increase**: Bias power.\n2. **Validation**: E-test.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut leakage. Lot W2024-8844.\n\nProcess Context: Gate Ox. Thickness.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Thin Oxide\n- **Mechanism**: Gas flow vortex thinned gate oxide in donut ring.\n\n## Corrective Actions\n\n1. **Tune**: Injector.\n2. **Validation**: E-test.\n\n**Severity**: Critical\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut standing wave. Lot W2024-9955.\n\nProcess Context: Litho. BARC.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: BARC Thickness\n- **Mechanism**: BARC thickness at destructive interference node in donut zone.\n\n## Corrective Actions\n\n1. **Adjust**: Spin speed.\n2. **Validation**: Reflectivity.\n\n**Severity**: Major\n**Yield Impact**: CD variation."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut micro-masking. Lot W2024-0066.\n\nProcess Context: Etch. Source power.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Micro-masking\n- **Mechanism**: Local redeposition of sputtered mask material in donut zone.\n\n## Corrective Actions\n\n1. **Reduce**: Bias.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut CMP scratch. Lot W2024-1177.\n\nProcess Context: CMP. Conditioner.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Conditioner Sweep\n- **Mechanism**: Conditioner dwell time too long at mid-radius, damaging pad or releasing diamonds.\n\n## Corrective Actions\n\n1. **Profile**: Sweep arm.\n2. **Validation**: Defect check.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut color shift. Lot W2024-2288.\n\nProcess Context: Nitride Dep. NH3 flow.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Stoichiometry Shift\n- **Mechanism**: N/Si ratio change in donut zone due to reactant depletion.\n\n## Corrective Actions\n\n1. **Increase**: NH3 flow.\n2. **Validation**: RI check.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut residue post-strip. Lot W2024-3399.\n\nProcess Context: Strip. Spray coverage.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Spray Shadowing\n- **Mechanism**: Spray arm angle caused shadowing in donut zone.\n\n## Corrective Actions\n\n1. **Adjust**: Arm angle.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut bridging. Lot W2024-4400.\n\nProcess Context: Lift-off. Retention.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Metal Retention\n- **Mechanism**: Metal sidewall deposition in donut zone prevented lift-off.\n\n## Corrective Actions\n\n1. **Improve**: Evaporation collimation.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut film stress. Lot W2024-5511.\n\nProcess Context: CVD. Frequency mix.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: LF/HF Mismatch\n- **Mechanism**: Radial variation in plasma frequency coupling changed stress.\n\n## Corrective Actions\n\n1. **Tune**: Match network.\n2. **Validation**: Bow map.\n\n**Severity**: Minor\n**Yield Impact**: Warpage."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut CD small. Lot W2024-6622.\n\nProcess Context: Etch. Loading.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Local Loading\n- **Mechanism**: High pattern density in donut zone depleted etchant.\n\n## Corrective Actions\n\n1. **Increase**: Flow.\n2. **Validation**: CD map.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut reflectivity. Lot W2024-7733.\n\nProcess Context: Metal CMP. Oxidizer.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Oxidizer Starvation\n- **Mechanism**: Slurry oxidizer depleted at mid-radius.\n\n## Corrective Actions\n\n1. **Increase**: Flow.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Donut particles. Lot W2024-8844.\n\nProcess Context: PVD. Shield flaking.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Shield Flaking\n- **Mechanism**: Stress in shield deposit caused flaking in specific ring.\n\n## Corrective Actions\n\n1. **Clean**: Shields.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  }
+]

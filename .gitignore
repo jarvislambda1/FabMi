@@ -1,0 +1,32 @@
+# Merged model (too large for GitHub, can be regenerated)
+models/ernie_semi_rca_merged/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Training artifacts (optional - uncomment if you don't want to track these)
+# models/*/optimizer.pt
+# models/*/scheduler.pt
+# models/*/rng_state*.pth

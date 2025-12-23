@@ -1,0 +1,38 @@
+{
+  "total": 3,
+  "valid": 3,
+  "errors": 0,
+  "rouge1": 0.2879,
+  "rouge2": 0.0917,
+  "rougeL": 0.15,
+  "severity_accuracy": 0.0,
+  "yield_accuracy": 1.0,
+  "structure_score": 0.4762,
+  "avg_latency_ms": 38873.6,
+  "by_defect_type": {
+    "edge_loc": {
+      "count": 1,
+      "rouge1": 0.2877,
+      "rougeL": 0.177,
+      "severity_acc": 0.0,
+      "structure": 0.4286
+    },
+    "near_full": {
+      "count": 1,
+      "rouge1": 0.35,
+      "rougeL": 0.15,
+      "severity_acc": 0.0,
+      "structure": 0.4286
+    },
+    "scratch": {
+      "count": 1,
+      "rouge1": 0.2259,
+      "rougeL": 0.1229,
+      "severity_acc": 0.0,
+      "structure": 0.5714
+    }
+  },
+  "model": "baidu/ernie-4.5-300b-a47b-paddle",
+  "elapsed_seconds": 76.7,
+  "workers": 2
+}

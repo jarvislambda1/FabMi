@@ -1,0 +1,202 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Linear backside scratches (20mm) on wafers 1, 3, 5, 7, 9... (odd slots). Even slots clean. Lot W2024-5510.\n\nProcess Context: FOUP-9921 used. Sorter-01.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: FOUP Slot Damage (Side A)\n- **Correlation Reasoning**: The 'odd slot only' pattern maps perfectly to one side of the FOUP's support teeth. If it were the robot, all wafers (or random ones) would be affected.\n- **Mechanism**: Burrs on Side A slots scratching wafer backside.\n\n## Corrective Actions\n\n1. **Quarantine**: Remove FOUP-9921 from service.\n2. **Inspect**: Check odd slots for damage.\n3. **Validation**: Run test lot with good FOUP.\n\n## Prevention Measures\n- **AOI**: Implement automated FOUP inspection.\n\n**Severity**: Major\n**Yield Impact**: 50%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Arc scratches on top surface of ALL 25 wafers. Same pattern seen on previous lot (different FOUP).\n\nProcess Context: Tool: ROBOT-BROOKS-05.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Robot End-Effector Particle\n- **Correlation Reasoning**: \n  1. 100% wafers affected = common handler.\n  2. Cross-FOUP persistence = Tool (Robot) issue, not FOUP.\n- **Mechanism**: Particle on robot blade scratching every wafer.\n\n## Corrective Actions\n\n1. **Clean**: Wipe/replace robot blade (P/N 412-1105).\n2. **Validation**: Mechanical scratch test.\n\n## Prevention Measures\n- **PM**: Increase blade cleaning frequency.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random multi-directional scratches on 5 wafers. Lot W2024-0042.\n\nProcess Context: Tool: CMP-EBRA-02. Pad conditioner old.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: CMP Pad Glazing / Agglomerates\n- **Correlation Reasoning**: Random distribution + multi-directional marks points to CMP process, not handling.\n- **Mechanism**: Dried slurry or glazed pad surface.\n\n## Corrective Actions\n\n1. **Change**: Replace Pad and Disk.\n2. **Flush**: Clean slurry lines.\n3. **Validation**: Pilot wafer.\n\n## Prevention Measures\n- **Filter**: Upgrade slurry filter.\n\n**Severity**: Major\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratch at notch area on wafers 1-10. Stopped after tool reset.\n\nProcess Context: Tool: ALIGNER-03. Vacuum error logged.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aligner Pin Contact\n- **Correlation Reasoning**: Defect at notch (aligner contact point) + stopped after reset = Aligner misalignment.\n- **Mechanism**: Pins dragging on wafer during rotation.\n\n## Corrective Actions\n\n1. **Calibrate**: Auto-cal ALIGNER-03.\n2. **Validation**: Cycle dummy wafers.\n\n## Prevention Measures\n- **Logic**: Abort on vacuum slip.\n\n**Severity**: Minor\n**Yield Impact**: 40%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge scratches on Slot 25 only, across 3 lots.\n\nProcess Context: Tool: FURNACE-TEL-01.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Robot Z-Height (Top Slot)\n- **Correlation Reasoning**: Specific to Slot 25 (top) across multiple FOUPs = Robot transfer height issue at that specific coordinate.\n- **Mechanism**: Wafer scraping boat ceiling/slot.\n\n## Corrective Actions\n\n1. **Teach**: Re-teach robot Z-positions.\n2. **Validation**: Transfer test.\n\n## Prevention Measures\n- **PM**: Check top slot clearance.\n\n**Severity**: Major\n**Yield Impact**: 4%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on wafers 2, 4, 6, 8, 10. Lot W2024-8822.\n\nProcess Context: FOUP-1122. Sorter-02.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: FOUP Slot Damage (Side B / Even)\n- **Correlation Reasoning**: Even-numbered slots only. Indicates damage to the 'Side B' comb of the FOUP.\n- **Mechanism**: Distorted slot pitch on right side.\n\n## Corrective Actions\n\n1. **Scrap**: Discard FOUP-1122.\n2. **Validation**: Run known good FOUP.\n\n**Severity**: Major\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Single long scratch on wafer 13 only. Lot W2024-3311.\n\nProcess Context: Manual Inspection Station.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Manual Handling / Tweezer Mark\n- **Correlation Reasoning**: Isolated to single wafer, non-repeating. Characteristic of manual handling error.\n- **Mechanism**: Operator tweezer slip.\n\n## Corrective Actions\n\n1. **Alert**: Notify operator.\n2. **Validation**: None (random).\n\n**Severity**: Major\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Circular scratches on all wafers. Lot W2024-9901.\n\nProcess Context: CMP-05. Membrane leak.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Retaining Ring Contact\n- **Correlation Reasoning**: Circular pattern + all wafers = Rotating mechanical part contacting wafer surface.\n- **Mechanism**: Worn retaining ring touching polished surface.\n\n## Corrective Actions\n\n1. **Replace**: Retaining ring.\n2. **Validation**: Visual.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Backside scratch, center. Wafers 1-25. Lot W2024-5544.\n\nProcess Context: CVD-01. Heater lift pin.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Burred Lift Pin\n- **Correlation Reasoning**: Center backside location on all wafers corresponds to lift pin contact point.\n- **Mechanism**: Ceramic burr on pin tip.\n\n## Corrective Actions\n\n1. **Replace**: Lift pins.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0% (Backside)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Parallel scratches. Wafers 1-5. Lot W2024-7788.\n\nProcess Context: Wet-Bench-01. Robot hand-off.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cassette Misalignment\n- **Correlation Reasoning**: Wafers 1-5 (bottom of batch) affected suggests cassette tilt or robot alignment issue at bottom slots.\n- **Mechanism**: Wafers dragging on cassette divider.\n\n## Corrective Actions\n\n1. **Teach**: Robot station alignment.\n2. **Validation**: Transfer test.\n\n**Severity**: Major\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Deep gouge at 12 o'clock. Wafers 1, 6, 11, 16, 21. Lot W2024-2255.\n\nProcess Context: Wet-Clean. 5-wafer batch transfer.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Transfer Arm Grip\n- **Correlation Reasoning**: Periodicity of 5 (1, 6, 11...) matches the 5-wafer batch size of the wet bench transfer arm.\n- **Mechanism**: Gripper over-travel crushing edge.\n\n## Corrective Actions\n\n1. **Calibrate**: Gripper force/position.\n2. **Validation**: Dummy run.\n\n**Severity**: Major\n**Yield Impact**: 20%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on bottom 3 wafers of every lot. Lot W2024-0011, 0012.\n\nProcess Context: Furnace-02. Boat slot 1-3.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Boat Distortion / Sag\n- **Correlation Reasoning**: Fixed location (bottom slots) across lots implies hardware fixture issue.\n- **Mechanism**: Quartz boat sagging at bottom, reducing clearance.\n\n## Corrective Actions\n\n1. **Replace**: Quartz boat.\n2. **Validation**: Clearance check.\n\n**Severity**: Major\n**Yield Impact**: 12%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Chatter marks (vibration scratch). Lot W2024-4466.\n\nProcess Context: CMP-03. Head vibration.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Head Vibration\n- **Correlation Reasoning**: Chatter pattern is distinct to harmonic vibration.\n- **Mechanism**: Worn bearings in carrier head.\n\n## Corrective Actions\n\n1. **Rebuild**: Carrier head.\n2. **Validation**: Vibration analysis.\n\n**Severity**: Major\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Wafer 25 scratch. Lot W2024-6644.\n\nProcess Context: Loadlock. Map error.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cross-slotting\n- **Correlation Reasoning**: Single wafer event associated with mapping error.\n- **Mechanism**: Robot attempted to put wafer in occupied slot.\n\n## Corrective Actions\n\n1. **Calibrate**: Mapper.\n2. **Validation**: Map test.\n\n**Severity**: Critical\n**Yield Impact**: Wafer breakage risk."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on front side, near edge. Lot W2024-8800.\n\nProcess Context: Stepper-04. Bernoulli wand.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Wand Contact\n- **Correlation Reasoning**: Location matches wand pickup zone.\n- **Mechanism**: Low pressure in Bernoulli wand caused wafer to touch metal surface.\n\n## Corrective Actions\n\n1. **Adjust**: N2 flow/pressure.\n2. **Validation**: Pickup test.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Radial scratches. Lot W2024-1133.\n\nProcess Context: Spin-Scrubber. Brush rpm high.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Brush Loading\n- **Correlation Reasoning**: Radial pattern matches brush rotation.\n- **Mechanism**: Particle trapped in PVA brush bristles.\n\n## Corrective Actions\n\n1. **Replace**: Brush.\n2. **Validation**: Particle check.\n\n**Severity**: Major\n**Yield Impact**: 15%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on wafers 1-13. Lot W2024-9977.\n\nProcess Context: Split lot processing. Tool A used for 1-13.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Tool A Handler\n- **Correlation Reasoning**: Defect correlates perfectly with the split processing group (Tool A).\n- **Mechanism**: Tool A robot issue.\n\n## Corrective Actions\n\n1. **Down**: Tool A.\n2. **Validation**: Test wafer.\n\n**Severity**: Major\n**Yield Impact**: 50%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Backside particles/scratches. Lot W2024-3355.\n\nProcess Context: PVD-02. Chuck clean skipped.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dirty Chuck\n- **Correlation Reasoning**: Backside defects imply chuck contamination.\n- **Mechanism**: Metal deposits on ESC surface scratching backside.\n\n## Corrective Actions\n\n1. **Clean**: Paste clean ESC.\n2. **Validation**: Backside inspection.\n\n**Severity**: Minor\n**Yield Impact**: 0% (unless defocus)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on Slot 1 only (repeated). Lot W2024-5522.\n\nProcess Context: Sorter-01. Cassette mapping sensor.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Mapping Sensor Interference\n- **Correlation Reasoning**: Slot 1 (bottom) is where mapping often starts/calibrates.\n- **Mechanism**: Robot wrist grazing wafer in Slot 1 during map.\n\n## Corrective Actions\n\n1. **Teach**: Mapping offset.\n2. **Validation**: Cycle test.\n\n**Severity**: Minor\n**Yield Impact**: 4%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches after transport. Lot W2024-7799.\n\nProcess Context: OHT (Overhead Transport). Vehicle 22.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: OHT Vibration\n- **Correlation Reasoning**: Linked to transport by Vehicle 22.\n- **Mechanism**: Rough bearing in OHT vehicle causing wafers to rattle in FOUP.\n\n## Corrective Actions\n\n1. **Service**: Vehicle 22.\n2. **Validation**: Vibration log.\n\n**Severity**: Major\n**Yield Impact**: <1%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on bevel. Lot W2024-0044.\n\nProcess Context: Centrifuge-01. Rotor balance.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Rotor Imbalance\n- **Correlation Reasoning**: Bevel marks consistent with lateral movement during spin.\n- **Mechanism**: Imbalanced rotor caused wafers to shift against cassette walls.\n\n## Corrective Actions\n\n1. **Balance**: Rotor.\n2. **Validation**: Spin test.\n\n**Severity**: Minor\n**Yield Impact**: Edge exclusion."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Grid pattern scratches. Lot W2024-2266.\n\nProcess Context: Measurement-SEM. Stage grid.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Vacuum Chuck Grid\n- **Correlation Reasoning**: Pattern matches the vacuum chuck grooves.\n- **Mechanism**: High vacuum or debris transferred grid pattern to wafer backside.\n\n## Corrective Actions\n\n1. **Clean**: Chuck.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on odd slots 1,3...13. Lot W2024-4488.\n\nProcess Context: Half-lot processing. FOUP-A.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: FOUP A Side Damage\n- **Correlation Reasoning**: Odd slots = Left side of FOUP. Stops at 13 (half lot).\n- **Mechanism**: Warped shelves on left side of FOUP.\n\n## Corrective Actions\n\n1. **Scrap**: FOUP.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 25%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches near flat. Lot W2024-6622.\n\nProcess Context: Aligner. Pre-alignment.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Aligner Slippage\n- **Correlation Reasoning**: Location (flat) is alignment datum.\n- **Mechanism**: Wafer slipped on vacuum chuck during rotation.\n\n## Corrective Actions\n\n1. **Check**: Vacuum level.\n2. **Validation**: Alignment test.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Comets/Scratches. Lot W2024-8844.\n\nProcess Context: Coater. Dispense nozzle touch.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dispense Nozzle Height\n- **Correlation Reasoning**: Comet tail starts at dispense point.\n- **Mechanism**: Nozzle tip touched wafer or fluid stream hit too hard.\n\n## Corrective Actions\n\n1. **Adjust**: Z-height.\n2. **Validation**: Gap check.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on top wafer. Lot W2024-1199.\n\nProcess Context: Storage. Box cover.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Box Cover Contact\n- **Correlation Reasoning**: Only top wafer affected.\n- **Mechanism**: Operator placed lid on storage box without spacer, touching top wafer.\n\n## Corrective Actions\n\n1. **Train**: Procedure.\n2. **Validation**: None.\n\n**Severity**: Critical\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches at 3 points (120 deg). Lot W2024-3377.\n\nProcess Context: Lifter-01. 3-pin lifter.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Lifter Pin Sync\n- **Correlation Reasoning**: 3-point symmetry matches lifter mechanism.\n- **Mechanism**: One pin moving faster/higher, causing slide.\n\n## Corrective Actions\n\n1. **Calibrate**: Pin height.\n2. **Validation**: Level check.\n\n**Severity**: Minor\n**Yield Impact**: Backside damage."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Arc scratch, R=100mm. Lot W2024-5599.\n\nProcess Context: Robot-03. Theta axis.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Robot Reach/Swing\n- **Correlation Reasoning**: Arc shape matches robot swing radius.\n- **Mechanism**: Wafer scraped chamber slit valve during entry.\n\n## Corrective Actions\n\n1. **Teach**: Station position.\n2. **Validation**: Transfer check.\n\n**Severity**: Major\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Cluster of scratches. Lot W2024-7733.\n\nProcess Context: Inspection. Microscope stage.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Stage Crash\n- **Correlation Reasoning**: Localized severe damage.\n- **Mechanism**: Objective lens hit wafer during Z-focus.\n\n## Corrective Actions\n\n1. **Calibrate**: Z-stop.\n2. **Validation**: Focus check.\n\n**Severity**: Critical\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge clamp marks. Lot W2024-9955.\n\nProcess Context: Etch-04. Mechanical clamp.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Pressure\n- **Correlation Reasoning**: Marks align with clamp fingers.\n- **Mechanism**: Excessive clamping force indented the wafer.\n\n## Corrective Actions\n\n1. **Adjust**: Spring tension.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: Edge exclusion."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on lot ID mark. Lot W2024-0066.\n\nProcess Context: Reader-01. Laser scribe.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Reader Head Contact\n- **Correlation Reasoning**: Location is exactly at ID mark.\n- **Mechanism**: OCR reader head too close.\n\n## Corrective Actions\n\n1. **Adjust**: Head distance.\n2. **Validation**: Read test.\n\n**Severity**: Minor\n**Yield Impact**: 0%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches after wet clean. Lot W2024-2288.\n\nProcess Context: Marangoni dryer. Lifter.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Lifter Jerk\n- **Correlation Reasoning**: Vertical scratches.\n- **Mechanism**: Lifter motion jerky during slow-pull, scratching wafers against guides.\n\n## Corrective Actions\n\n1. **Lube**: Lifter screw.\n2. **Validation**: Motion smoothness.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on Wafers 1-25. Lot W2024-4411.\n\nProcess Context: Buffer Station. Slot pitch wrong.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Slot Pitch Mismatch\n- **Correlation Reasoning**: All wafers affected.\n- **Mechanism**: Buffer station pitch (10mm) mismatched with robot pitch (12mm), causing scraping.\n\n## Corrective Actions\n\n1. **Config**: Set correct pitch.\n2. **Validation**: Transfer.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on wafer center backside. Lot W2024-6633.\n\nProcess Context: Litho Chuck. Burl damage.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chuck Burl Damage\n- **Correlation Reasoning**: Repeated backside pattern.\n- **Mechanism**: Damaged 'burl' (support pin) on chuck scratching backside.\n\n## Corrective Actions\n\n1. **Replace**: Chuck.\n2. **Validation**: Visual.\n\n**Severity**: Minor\n**Yield Impact**: Focus hot spots."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on Wafers 24, 25. Lot W2024-8866.\n\nProcess Context: Furnace. Boat cap.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Boat Cap Clearance\n- **Correlation Reasoning**: Only top wafers affected.\n- **Mechanism**: Thermal insulation cap touching top wafers during ramp.\n\n## Corrective Actions\n\n1. **Adjust**: Cap position.\n2. **Validation**: Clearance check.\n\n**Severity**: Major\n**Yield Impact**: 8%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches random. Lot W2024-1188.\n\nProcess Context: Manual handling. Glove texture.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Improper Glove\n- **Correlation Reasoning**: Random handling marks.\n- **Mechanism**: Operator used textured grip gloves instead of smooth nitrile.\n\n## Corrective Actions\n\n1. **Enforce**: PPE policy.\n2. **Validation**: Audit.\n\n**Severity**: Major\n**Yield Impact**: Varies."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches horizontal. Lot W2024-3300.\n\nProcess Context: Slide transfer. Guide rail.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Guide Rail Burr\n- **Correlation Reasoning**: Straight horizontal lines.\n- **Mechanism**: Burr on PTFE guide rail.\n\n## Corrective Actions\n\n1. **Sand/Replace**: Rail.\n2. **Validation**: Touch check.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches during alignment. Lot W2024-5533.\n\nProcess Context: Pre-aligner. Edge sensor.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Sensor Contact\n- **Correlation Reasoning**: Edge scratch.\n- **Mechanism**: Optical sensor bracket loose, touching wafer edge.\n\n## Corrective Actions\n\n1. **Secure**: Bracket.\n2. **Validation**: Clearance.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on Wafers 1, 13, 25. Lot W2024-7755.\n\nProcess Context: Monitor slots. Monitor rack.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Rack Damage\n- **Correlation Reasoning**: Only monitor wafer slots affected.\n- **Mechanism**: Metal storage rack for monitors has sharp edges.\n\n## Corrective Actions\n\n1. **Replace**: Rack.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: Monitor loss."
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches chaotic. Lot W2024-9922.\n\nProcess Context: Robot collision.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Robot Collision\n- **Correlation Reasoning**: Severe damage, tool alarm.\n- **Mechanism**: Robot arm hit chamber wall while holding wafer.\n\n## Corrective Actions\n\n1. **Retrain**: Robot.\n2. **Validation**: Position check.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Wafer break)"
+  }
+]

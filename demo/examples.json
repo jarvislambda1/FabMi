@@ -1,0 +1,47 @@
+[
+  {
+    "defect_type": "edge_loc",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge-localized defects at 3 o'clock position on lot W2024-4521. Defects concentrated at single clock position, not full ring. 12% yield loss on 8 wafers. Position fixed relative to notch.\n\nProcess Context: LITH-TEL-03, Recipe: GATE_LAYER. Chuck edge contamination at 3 o'clock. Defect position fixed regardless of notch orientation. Contamination deposited post-alignment."
+  },
+  {
+    "defect_type": "scratch",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Scratches on lot W2025-6234. Only edge die affected. Scratches follow wafer edge profile.\n\nProcess Context: Tool: PROBE-TEL-04. Recipe: FINAL_TEST. Probe card edge needles dragging. Edge die damaged during test."
+  },
+  {
+    "defect_type": "near_full",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Near-full defect on lot W2024-2234. Wafers show 'rainbow' discoloration across >95% of surface with severe film thickness variation. Expected 1000nm film, measured 200-2500nm random variation.\n\nProcess Context: Thermal oxidation on FURNACE-KOYO-02. Recipe OX_DRY_1000NM. FDC shows: O2 flow stable, temperature stable at 1050\u00b0C. However, wafer spacing data shows 4mm spacing (spec: 6mm). Lot loaded manually due to automation fault."
+  },
+  {
+    "defect_type": "donut",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Ring defects on lot W2024-6345. Donut pattern 60-90mm. Plasma damage visible at ring location. Yield loss 20%.\n\nProcess Context: Tool: ETCH-LAM-12. Recipe: CONTACT_ETCH. Edge ring erosion creating plasma focusing. Ring radius matches eroded area."
+  },
+  {
+    "defect_type": "center",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Center pattern on lot W2024-2309 with 20% yield loss. Bulls-eye within 40mm radius. High-k dielectric breakdown at center. 17 wafers affected.\n\nProcess Context: ALD-AMAT-04 HfO2. Recipe: HFK_GATE_V4. Center thickness: 2.5nm vs edge: 2.0nm. Cycle count: 35. Precursor delivery at center suspected."
+  },
+  {
+    "defect_type": "edge_ring",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Edge ring pattern on lot W2024-8491 with 10% yield loss. Visible contamination ring at 11-14mm from edge. Contamination is organic per FTIR analysis. 12 wafers affected. Issue started after resist strip process.\n\nProcess Context: Wafers processed through STRIP-AMAT-02 then ETCH-LAM-08. Strip recipe: PHOTORESIST_ASH. Strip chamber at 3,200 RF-hours. Edge contamination detected after etch step."
+  },
+  {
+    "defect_type": "random",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Random surface damage on wafers after ion beam etch. Damage appears as shallow craters 10-50\u03bcm diameter. Affects wafers during first 30 minutes after tool startup, then stabilizes. Ion source warm-up suspected.\n\nProcess Context: Tool IBE-01 idles between lots. Ion source re-ignites after idle. Sputter target soak-in takes 15-20 minutes per specification. First wafers processed after only 10-minute soak."
+  },
+  {
+    "defect_type": "loc",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized bridging. Lot W2024-9999.\n\nProcess Context: CMP. Slurry agglomerate.\n"
+  },
+  {
+    "defect_type": "none",
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Quality pass. Lot W2024-GOOD-23.\n\nProcess Context: QC.\n"
+  }
+]

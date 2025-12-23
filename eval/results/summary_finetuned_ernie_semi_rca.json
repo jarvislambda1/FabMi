@@ -1,0 +1,44 @@
+{
+  "total": 5,
+  "valid": 5,
+  "errors": 0,
+  "rouge1": 0.4797,
+  "rouge2": 0.2283,
+  "rougeL": 0.3823,
+  "severity_accuracy": 0.6,
+  "yield_accuracy": 1.0,
+  "structure_score": 0.9429,
+  "avg_latency_ms": 4279.0,
+  "by_defect_type": {
+    "donut": {
+      "count": 1,
+      "rouge1": 0.5402,
+      "rougeL": 0.4368,
+      "severity_acc": 0.0,
+      "structure": 0.8571
+    },
+    "edge_loc": {
+      "count": 1,
+      "rouge1": 0.4752,
+      "rougeL": 0.3861,
+      "severity_acc": 1.0,
+      "structure": 0.8571
+    },
+    "near_full": {
+      "count": 2,
+      "rouge1": 0.408,
+      "rougeL": 0.3175,
+      "severity_acc": 0.5,
+      "structure": 1.0
+    },
+    "scratch": {
+      "count": 1,
+      "rouge1": 0.567,
+      "rougeL": 0.4536,
+      "severity_acc": 1.0,
+      "structure": 1.0
+    }
+  },
+  "model": "ernie_semi_rca",
+  "server_url": "http://localhost:8000/v1"
+}

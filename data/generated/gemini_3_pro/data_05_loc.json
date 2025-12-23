@@ -1,0 +1,152 @@
+[
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Dense cluster of particles at coordinates (X: -40, Y: 120). Lot W2024-9981.\n\nProcess Context: Tool: PVD-AMAT-04. Shutter mechanism cycles: 98,000 (Limit 100k).",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Shutter Mechanism Particle Generation\n- **Mechanism**: The PVD source shutter is nearing end-of-life. Mechanical wear at the pivot point is generating particles that fall onto the wafer in a specific location relative to the shutter arm.\n- **Evidence**: Cluster location matches shutter arm geometry.\n\n## Corrective Actions\n\n1. **PM**: Perform early PM to replace shutter assembly.\n2. **Clean**: Wet clean chamber.\n3. **Validation**: Particle monitor.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Large 'splash' mark or stain at wafer notch. Lot W2024-1111.\n\nProcess Context: Tool: CLEAN-DNS-01. Spin dryer nozzle 3 showed dripping after process stop.",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Post-Process Nozzle Drip\n- **Mechanism**: A leaking check valve in the DI water nozzle allows droplets to fall on the wafer after the spin cycle finishes, causing a water mark/stain.\n\n## Corrective Actions\n\n1. **Replace**: Change suck-back valve/check valve on Nozzle 3.\n2. **Validation**: Dry cycle test with blotter paper.\n\n**Severity**: Major\n**Yield Impact**: 100% (localized but killer)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized scratch X=10, Y=10. Lot W2024-2222.\n\nProcess Context: Handler. Vacuum wand.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Vacuum Wand Contact\n- **Mechanism**: Operator touched surface with wand tip during manual transfer.\n\n## Corrective Actions\n\n1. **Train**: Handling.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Particle cluster at clamp site. Lot W2024-3333.\n\nProcess Context: Etch. Mechanical clamp.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Clamp Wear\n- **Mechanism**: Clamp fingers worn, shedding particles at contact points.\n\n## Corrective Actions\n\n1. **Replace**: Clamp ring.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Spot defect. Lot W2024-4444.\n\nProcess Context: Litho. Reticle particle.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Reticle Particle\n- **Mechanism**: Particle on the reticle (mask) printed on every die in the same location.\n\n## Corrective Actions\n\n1. **Clean**: Reticle.\n2. **Validation**: Print check.\n\n**Severity**: Critical\n**Yield Impact**: 100% (Repeater)"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized blistering. Lot W2024-5555.\n\nProcess Context: Implant. Beam glitch.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Beam Spot Heating\n- **Mechanism**: Ion beam paused or spiked at one location, causing resist blistering.\n\n## Corrective Actions\n\n1. **Tune**: Scan system.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Liquid drop mark. Lot W2024-6666.\n\nProcess Context: Track. Exhaust drip.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Exhaust Condensation\n- **Mechanism**: Solvent vapor condensed in exhaust duct and dripped onto wafer.\n\n## Corrective Actions\n\n1. **Heat**: Exhaust line.\n2. **Validation**: Visual.\n\n**Severity**: Critical\n**Yield Impact**: 100%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized peeling. Lot W2024-7777.\n\nProcess Context: PVD. Contamination.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Fingerprint/Oil\n- **Mechanism**: Organic residue (fingerprint) prevented adhesion in one spot.\n\n## Corrective Actions\n\n1. **Train**: Glove protocol.\n2. **Validation**: None.\n\n**Severity**: Critical\n**Yield Impact**: 1 wafer"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Cluster of pits. Lot W2024-8888.\n\nProcess Context: Wet etch. Bubble mask.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Trapped Bubbles\n- **Mechanism**: Hydrogen bubbles from reaction trapped in a cluster, blocking etch.\n\n## Corrective Actions\n\n1. **Agitate**: Increase.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized bridging. Lot W2024-9999.\n\nProcess Context: CMP. Slurry agglomerate.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Slurry Agglomerate scratch\n- **Mechanism**: Large slurry particle caused scratch and subsequent shorting.\n\n## Corrective Actions\n\n1. **Filter**: Change.\n2. **Validation**: Defect map.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized color shift. Lot W2024-0011.\n\nProcess Context: CVD. Gas jet.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Gas Jet Impingement\n- **Mechanism**: High velocity gas jet hit wafer at one spot, cooling it or changing composition.\n\n## Corrective Actions\n\n1. **Diffuser**: Install/Check.\n2. **Validation**: Thickness.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Arc defect R=50. Lot W2024-1122.\n\nProcess Context: Robot. Wrist seal.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Seal Particles\n- **Mechanism**: Worn robot wrist seal dropping particles in arc path.\n\n## Corrective Actions\n\n1. **Replace**: Seal.\n2. **Validation**: Particle.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized void. Lot W2024-2233.\n\nProcess Context: Gapfill. Dust.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Dust Nucleation\n- **Mechanism**: Dust particle caused void nucleation in flowable oxide.\n\n## Corrective Actions\n\n1. **Clean**: Chamber.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized recrystallization. Lot W2024-3344.\n\nProcess Context: Anneal. Hot spot.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Filament Hot Spot\n- **Mechanism**: Heater filament sagged closer to wafer at one point, creating hot spot.\n\n## Corrective Actions\n\n1. **Replace**: Heater.\n2. **Validation**: Temp map.\n\n**Severity**: Critical\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized dishing. Lot W2024-4455.\n\nProcess Context: CMP. Pad defect.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Pad Defect\n- **Mechanism**: Hole or defect in CMP pad caused localized over-polish.\n\n## Corrective Actions\n\n1. **Change**: Pad.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized pattern distortion. Lot W2024-5566.\n\nProcess Context: Litho. Backside burr.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Backside Particle/Burr\n- **Mechanism**: Wafer deformed over a backside particle, distorting pattern on front.\n\n## Corrective Actions\n\n1. **Clean**: Chuck.\n2. **Validation**: Flatness.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized etching. Lot W2024-6677.\n\nProcess Context: Wet. Droplet.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Chemical Splatter\n- **Mechanism**: Etchant splashed onto wafer before process started.\n\n## Corrective Actions\n\n1. **Check**: Splash guard.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized missing pattern. Lot W2024-7788.\n\nProcess Context: Litho. Resist flake.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Resist Flake\n- **Mechanism**: Flake of resist landed on wafer, blocking exposure.\n\n## Corrective Actions\n\n1. **Clean**: Coater bowl.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized arcing. Lot W2024-8899.\n\nProcess Context: Etch. Charge build-up.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Antenna Effect\n- **Mechanism**: Local structure collected charge and arced.\n\n## Corrective Actions\n\n1. **Recipe**: Pulsed plasma.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized stress cracks. Lot W2024-9900.\n\nProcess Context: Probe. Overdrive.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Probe Pressure\n- **Mechanism**: Probe card pin hit too hard in one area, cracking passivation.\n\n## Corrective Actions\n\n1. **Calibrate**: Overdrive.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized hillocks. Lot W2024-0011.\n\nProcess Context: Anneal. Laser spike.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Laser Power Spike\n- **Mechanism**: Laser anneal power spiked at one coordinate.\n\n## Corrective Actions\n\n1. **Check**: Laser stable.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized short. Lot W2024-1122.\n\nProcess Context: CMP. Copper smear.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Copper Smearing\n- **Mechanism**: Debris smeared copper between lines in one spot.\n\n## Corrective Actions\n\n1. **Clean**: Post-CMP.\n2. **Validation**: E-test.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized open. Lot W2024-2233.\n\nProcess Context: Etch. Particle mask.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Micro-masking (Particle)\n- **Mechanism**: Particle blocked etch, leaving open circuit.\n\n## Corrective Actions\n\n1. **Clean**: Pre-etch.\n2. **Validation**: Defect.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized thickness variation. Lot W2024-3344.\n\nProcess Context: CMP. Head bubble.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Bladder Bubble\n- **Mechanism**: Air bubble in carrier head bladder caused non-uniform pressure spot.\n\n## Corrective Actions\n\n1. **Purge**: Bladder.\n2. **Validation**: Uniformity.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized delamination. Lot W2024-4455.\n\nProcess Context: Clean. Water spot.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Water Spot\n- **Mechanism**: Dried water spot prevented adhesion of next layer.\n\n## Corrective Actions\n\n1. **Dry**: Improve drying.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized doping error. Lot W2024-5566.\n\nProcess Context: Implant. Particle shadow.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Particle Shadowing\n- **Mechanism**: Large particle shadowed the implant beam, leaving area undoped.\n\n## Corrective Actions\n\n1. **Clean**: Pre-implant.\n2. **Validation**: Rs map.\n\n**Severity**: Major\n**Yield Impact**: 1 die"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized CD error. Lot W2024-6677.\n\nProcess Context: Litho. Flare.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Local Flare\n- **Mechanism**: Reflection from underlying topography caused local CD change.\n\n## Corrective Actions\n\n1. **ARC**: Improve BARC.\n2. **Validation**: CD.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized erosion. Lot W2024-7788.\n\nProcess Context: Wet Clean. Flow pattern.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Flow Eddy\n- **Mechanism**: High velocity eddy in tank eroded feature at specific location.\n\n## Corrective Actions\n\n1. **Flow**: Adjust rate.\n2. **Validation**: SEM.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized discoloration. Lot W2024-8899.\n\nProcess Context: Ash. Water leak.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Cooling Leak\n- **Mechanism**: Small water leak in chamber caused local oxidation/color change.\n\n## Corrective Actions\n\n1. **Leak Check**: Chamber.\n2. **Validation**: Visual.\n\n**Severity**: Major\n**Yield Impact**: 10%"
+  },
+  {
+    "instruction": "Analyze this semiconductor wafer defect and provide root cause analysis with corrective actions.",
+    "input": "Defect Observation: Localized roughness. Lot W2024-9900.\n\nProcess Context: Epi. Slip line.\n",
+    "output": "## Root Cause Analysis\n\n**Primary Cause**: Slip Dislocation\n- **Mechanism**: Thermal stress caused crystal slip and surface roughness.\n\n## Corrective Actions\n\n1. **Ramp**: Slow down.\n2. **Validation**: X-ray.\n\n**Severity**: Major\n**Yield Impact**: 5%"
+  }
+]
